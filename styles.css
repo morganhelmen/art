@@ -66,3 +66,10 @@ h1 em, .contact-inner h2 em { color: #8b35c8; }
 .quiet-label { color: #713b96; border-color: #d4b9e8; }
 .art-dialog { background: #f8f1ff; color: #291638; }
 .dialog-art { background: #ead8f7; }
+
+
+/* Language selector */
+.language-switch{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
+.language-switch a{text-decoration:none;padding:7px 2px;opacity:.65}
+.language-switch a[aria-current="page"]{opacity:1;color:var(--accent);font-weight:700;border-bottom:1px solid var(--accent)}
+@media(max-width:760px){.language-switch{margin-left:auto;margin-right:2px;gap:6px}.language-switch a{padding:8px 2px}}
