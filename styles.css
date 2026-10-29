@@ -73,3 +73,16 @@ h1 em, .contact-inner h2 em { color: #8b35c8; }
 .language-switch a{text-decoration:none;padding:7px 2px;opacity:.65}
 .language-switch a[aria-current="page"]{opacity:1;color:var(--accent);font-weight:700;border-bottom:1px solid var(--accent)}
 @media(max-width:760px){.language-switch{margin-left:auto;margin-right:2px;gap:6px}.language-switch a{padding:8px 2px}}
+
+/* Language dropdown, matching the site's navigation */
+.language-switch{position:relative;display:block;flex-shrink:0;color:var(--ink);font-size:12px;letter-spacing:0}
+.language-switch summary{list-style:none;display:flex;align-items:center;gap:9px;padding:10px 13px;border:1px solid #d8c3e8;border-radius:8px;background:#fffaff;min-height:42px;cursor:pointer;white-space:nowrap}
+.language-switch summary::-webkit-details-marker{display:none}
+.language-switch summary svg{flex-shrink:0}
+.language-switch .language-chevron{margin-left:7px;font-size:14px;line-height:1;transition:transform .2s}
+.language-switch[open] .language-chevron{transform:rotate(180deg)}
+.language-switch nav{position:absolute;right:0;top:calc(100% + 3px);z-index:40;min-width:180px;background:#fffaff;border:1px solid #e0d2eb;box-shadow:0 12px 25px #2916381c}
+.language-switch nav a{display:block;padding:12px 16px;text-decoration:none;font-size:12px;color:#291638}
+.language-switch nav a[aria-current="page"]{background:#f0e7f7}
+.language-switch nav a:hover{background:#f5effa}
+@media(max-width:760px){.language-switch{margin-left:auto}.language-switch summary{gap:6px;padding:8px 9px;min-height:40px;font-size:10px}.language-switch summary .language-chevron{margin-left:0}.language-switch nav{min-width:155px}}
