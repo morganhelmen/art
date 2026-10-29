@@ -1,6 +1,6 @@
 # Lisa Wilberg Helmen — art
 
-Separate static art portfolio, intended for Cloudflare Pages and later art.helmen.no.
+Separate static art portfolio, configured for Cloudflare Workers Static Assets and later art.helmen.no.
 It contains 20 explicitly labelled placeholder slots; no actual artwork or artist biography has been invented.
 
 ## Files
@@ -9,16 +9,18 @@ It contains 20 explicitly labelled placeholder slots; no actual artwork or artis
 - styles.css: responsive styling.
 - app.js: gallery size control, accessible image dialog and keyboard navigation.
 
-## Cloudflare Pages setup
+## Cloudflare Workers setup
 Git repository: morganhelmen/art
 Production branch: main
-Framework preset: None
-Build command: exit 0
-Build output directory: /
+Project/Worker name: art
+Build command: exit 0 (or empty)
+Deploy command: npx wrangler deploy
 Root directory: leave empty/default.
+Disable preview builds unless branch previews are needed.
 
-Use the temporary pages.dev address first. No domain/DNS changes are required.
-Later attach art.helmen.no as a custom domain on this Pages project.
+wrangler.jsonc serves static assets from the repository root. .assetsignore excludes documentation, Git metadata and configuration from deployment.
+Use the temporary workers.dev address first. No DNS changes are required.
+Later attach art.helmen.no as a custom domain on this Worker.
 
 ## Completing the gallery
 Add real artwork images under assets/ and update image/title/medium/dimensions in artworks.js.
