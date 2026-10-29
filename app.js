@@ -16,7 +16,7 @@
     artworkLabel: "Se ", placeholderSuffix: " – plassholder", painting: "Maleri",
     placeholderStatus: "Plassholder", artist: "Malt av Lisa Wilberg Helmen.",
     placeholderDescription: "Her kommer et maleri av Lisa Wilberg Helmen. Tittel, teknikk og mål legges til sammen med bildet.",
-    medium: "Teknikk", dimensions: "Mål", year: "År", placeholderMeta: copy.placeholderMeta,
+    medium: "Teknikk", dimensions: "Mål", year: "År", placeholderMeta: "PLASSHOLDER",
     previous: "Forrige", next: "Neste"
   };
   let selected = 0;
