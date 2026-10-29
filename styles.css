@@ -38,3 +38,31 @@ h1 em{color:#8050a8}
 .art-dialog::backdrop{background:#2e2039e0}
 .dialog-art{background:#eee5f2}
 @media(hover:hover) and (pointer:fine){.desktop-nav a:hover,.back-top:hover{color:var(--accent)}}
+
+
+/* Stronger purple theme test */
+:root {
+  --paper: #f8f1ff;
+  --ink: #291638;
+  --muted: #715b83;
+  --line: #dfc9f2;
+  --accent: #8b35c8;
+}
+body { background: #f8f1ff; color: #291638; }
+.site-header { background: #f8f1fff2; border-bottom-color: #dfc9f2; }
+.signature-dot, .little-line { background: #8b35c8; }
+.desktop-nav a:last-child { border-bottom-color: #8b35c880; }
+h1 em, .contact-inner h2 em { color: #8b35c8; }
+.display-wall { background: #ddc5f0; }
+.gallery-section { background: #efe2fa; }
+.gallery-toolbar { border-color: #d9c0eb; }
+.gallery-toolbar button[aria-pressed="true"] { background: #fffaff; border-color: #c9a4e5; }
+.art-image { background: #fffaff; border-color: #dfc9f2; }
+.about-monogram { background: #ead8f7; color: #a77ac7; }
+.about-monogram span:nth-child(2) { color: #8150a5; }
+.contact-section { background: #e4d0f4; }
+.contact-copy p, .contact-coming { color: #634878; }
+.contact-coming { border-top-color: #c7a7df; }
+.quiet-label { color: #713b96; border-color: #d4b9e8; }
+.art-dialog { background: #f8f1ff; color: #291638; }
+.dialog-art { background: #ead8f7; }
