@@ -123,3 +123,16 @@ h1 em, .contact-inner h2 em { color: #8b35c8; }
 .contact-fallback{font-size:10px;color:#634878;text-decoration:underline;text-underline-offset:3px}
 .contact-honeypot{position:absolute!important;left:-5000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 @media(max-width:760px){.contact-form{max-width:none}.contact-submit{max-width:none}}
+
+
+/* Larger header wordmark and gallery label */
+.signature{font-size:46px;padding-bottom:25px}
+.signature small{font-size:18px;letter-spacing:.2em}
+.signature .signature-dot{width:8px;height:8px;margin-left:8px;margin-bottom:8px}
+.header-inner{min-height:120px}
+@media(max-width:760px){
+  .signature{font-size:40px;padding-bottom:22px}
+  .signature small{font-size:16px;letter-spacing:.18em}
+  .signature .signature-dot{width:7px;height:7px;margin-left:7px;margin-bottom:7px}
+  .header-inner{min-height:105px}
+}
