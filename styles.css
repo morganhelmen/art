@@ -107,3 +107,19 @@ h1 em, .contact-inner h2 em { color: #8b35c8; }
 .hero-frame img{width:100%;height:calc(100% - 18px);min-height:0;object-fit:contain;background:#fdfcf8}
 .hero-art-label{display:block;flex:0 0 11px;font:8px Arial,sans-serif;letter-spacing:.12em;color:var(--muted);text-align:right;white-space:nowrap}
 .frame-front img{height:calc(100% - 18px)}
+
+
+/* Contact form */
+.contact-form{display:grid;gap:16px;margin-top:25px;max-width:440px}
+.contact-form>label{display:grid;gap:6px;color:#634878;font-size:10px;letter-spacing:.04em}
+.contact-form input,.contact-form textarea{width:100%;border:1px solid #c7a7df;border-radius:2px;background:#faf7fc;color:#291638;padding:12px 13px;font:13px Arial,Helvetica,sans-serif;outline:none}
+.contact-form textarea{resize:vertical;min-height:120px;line-height:1.6}
+.contact-form input:focus,.contact-form textarea:focus{border-color:#8b35c8;box-shadow:0 0 0 2px #8b35c826}
+.contact-submit{display:flex;justify-content:space-between;align-items:center;gap:20px;width:100%;max-width:230px;padding:13px 16px;background:#291638;color:#fffaff;font-size:11px;text-align:left;transition:background .2s}
+.contact-submit span{font-size:17px}
+.contact-submit:hover{background:#713b96}
+.contact-submit:disabled{opacity:.6;cursor:wait}
+.contact-status{min-height:1.5em;margin:0;color:#634878;font-size:11px}
+.contact-fallback{font-size:10px;color:#634878;text-decoration:underline;text-underline-offset:3px}
+.contact-honeypot{position:absolute!important;left:-5000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+@media(max-width:760px){.contact-form{max-width:none}.contact-submit{max-width:none}}
