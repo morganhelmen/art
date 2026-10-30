@@ -1,4 +1,4 @@
-// Artwork images hosted in the repository root on main. Titles and artwork details can be added when ready.
+// Artwork images hosted in the repository root on main. Artwork details are added as provided by the artist.
 window.ARTWORKS = [
   {
     "id": "verk-01",
@@ -62,123 +62,135 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-07",
-    "title": "Verk 07",
+    "title": "Jentene",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20260429_103420.jpg",
-    "medium": null,
+    "medium": "Olje på lerret",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "clay"
+    "palette": "clay",
+    "sold": true
   },
   {
     "id": "verk-08",
-    "title": "Verk 08",
+    "title": "Lyset I mørket",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_5318581180406524715.jpg",
-    "medium": null,
+    "medium": "Olje på lerret",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "sage"
+    "palette": "sage",
+    "sold": false
   },
   {
     "id": "verk-09",
-    "title": "Verk 09",
+    "title": "Bestemor Wilberg",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_7307338540032469079.jpg",
-    "medium": null,
+    "medium": "Olje på lerret",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "sand"
+    "palette": "sand",
+    "sold": false
   },
   {
     "id": "verk-10",
     "title": "Verk 10",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_7728686583497568759.jpg",
+    "image": null,
     "medium": null,
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "rose"
+    "palette": "rose",
+    "sold": false
   },
   {
     "id": "verk-11",
-    "title": "Verk 11",
+    "title": "Følelser",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_858120838675295458.jpg",
-    "medium": null,
+    "medium": "Akryl på miniplate",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "blue"
+    "palette": "blue",
+    "sold": false
   },
   {
     "id": "verk-12",
-    "title": "Verk 12",
+    "title": "Glød sammen",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/Messenger_creation_91581513-0422-4D9E-B4B7-A156ED82B2F5.png",
-    "medium": null,
+    "medium": "Akryl og selvlysende maling på lerret",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "linen"
+    "palette": "linen",
+    "sold": false
   },
   {
     "id": "verk-13",
-    "title": "Gullgruve",
+    "title": "Mors Vrede",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/FB_IMG_1641832533179.jpg",
-    "medium": null,
+    "medium": "Oljemaling, fingermalt",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "clay"
+    "palette": "clay",
+    "sold": false
   },
   {
     "id": "verk-14",
-    "title": "Verk 14",
+    "title": "Aketur",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20261030_200627.jpg",
-    "medium": null,
+    "medium": "Olje på lerret",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "sage"
+    "palette": "sage",
+    "sold": false
   },
   {
     "id": "verk-15",
-    "title": "Verk 15",
+    "title": "Bebin & Gammern",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20261030_200654.jpg",
-    "medium": null,
+    "medium": "Akryl på plate",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "sand"
+    "palette": "sand",
+    "sold": false
   },
   {
     "id": "verk-16",
-    "title": "Verk 16",
+    "title": "Kopi av Mona Lisa",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG20210816095728.jpg",
-    "medium": null,
+    "medium": "Olje på lerret med ramme",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "rose"
+    "palette": "rose",
+    "sold": true
   },
   {
     "id": "verk-17",
-    "title": "Verk 17",
+    "title": "Kong Herodes",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG20211123134047.jpg",
-    "medium": null,
+    "medium": "Olje på lerret",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "blue"
+    "palette": "blue",
+    "sold": true
   },
   {
     "id": "verk-18",
-    "title": "Verk 18",
+    "title": "Lyra I soloppgang",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG20211216190547.jpg",
-    "medium": null,
+    "medium": "Olje på lerret",
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "linen"
+    "palette": "linen",
+    "sold": false
   },
   {
     "id": "verk-19",
