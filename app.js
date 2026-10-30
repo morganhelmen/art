@@ -4,9 +4,17 @@
   const dialog = document.getElementById("artDialog");
   const palettes = new Set(["clay","sage","sand","rose","blue","linen"]);
   const params = new URLSearchParams(window.location.search);
-  const isEnglish = params.get("lang") === "en";
-  document.documentElement.lang = isEnglish ? "en" : "nb";
-  const copy = isEnglish ? {
+  const isEnglish = params.get("lang") === "en" || window.location.pathname.startsWith("/en/");
+  const isSpanish = window.location.pathname.startsWith("/es/");
+  document.documentElement.lang = isSpanish ? "es" : (isEnglish ? "en" : "nb");
+  const copy = isSpanish ? {
+    coming: "Imagen próximamente", placeholder: "Obra ", artwork: "Obra",
+    artworkLabel: "Ver ", placeholderSuffix: " – próximamente", painting: "Pintura",
+    placeholderStatus: "Próximamente", artist: "Pintado por Lisa Wilberg Helmen.",
+    placeholderDescription: "Aquí se mostrará una pintura de Lisa Wilberg Helmen. El título, la técnica y las dimensiones se añadirán junto con la imagen.",
+    medium: "Técnica", dimensions: "Dimensiones", year: "Año", placeholderMeta: "PRÓXIMAMENTE",
+    previous: "Anterior", next: "Siguiente"
+  } : isEnglish ? {
     coming: "Image coming soon", placeholder: "Artwork ", artwork: "Artwork",
     artworkLabel: "View ", placeholderSuffix: " – placeholder", painting: "Painting",
     placeholderStatus: "Placeholder", artist: "Painted by Lisa Wilberg Helmen.",
@@ -119,22 +127,17 @@
     if (event.key === "ArrowRight") { event.preventDefault(); show(selected + 1); }
   });
 
-  // Translate the page in place. The language choice uses ?lang=en, so no /en/ route is needed.
+  // Keep the language selector as ordinary links; each language has its own page.
   const languageMenu = document.querySelector(".language-switch");
   if (languageMenu) {
-    const englishLink = languageMenu.querySelector('a[lang="en"]');
-    const norwegianLink = languageMenu.querySelector('a[lang="nb"]');
-    englishLink.setAttribute("aria-current", isEnglish ? "page" : "false");
-    norwegianLink.setAttribute("aria-current", isEnglish ? "false" : "page");
-    languageMenu.querySelector("summary span:not(.language-chevron)").textContent = isEnglish ? "Language" : "Språk/Language";
-    languageMenu.setAttribute("aria-label", isEnglish ? "Choose language" : "Velg språk");
-    languageMenu.querySelector("nav").setAttribute("aria-label", isEnglish ? "Choose language" : "Velg språk");
-    languageMenu.addEventListener("click", event => {
-      const link = event.target.closest("a");
-      if (link) languageMenu.open = false;
+    const currentLanguage = isSpanish ? "es" : (isEnglish ? "en" : "nb");
+    languageMenu.querySelectorAll("a[lang]").forEach(link => {
+      if (link.lang === currentLanguage) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
     });
+    languageMenu.setAttribute("aria-label", isSpanish ? "Elegir idioma" : (isEnglish ? "Choose language" : "Velg språk"));
   }
-  if (isEnglish) {
+  if (isEnglish && !window.location.pathname.startsWith("/en/")) {
     const translations = [
       ['.skip-link', 'Skip to gallery'],
       ['.desktop-nav a[href="#galleri"]', 'Gallery <span>20</span>'],
