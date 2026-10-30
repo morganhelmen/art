@@ -166,7 +166,7 @@
       ['.about-copy .quiet-label', 'Artist introduction coming soon'],
       ['.contact-inner .eyebrow', 'CONTACT'],
       ['#contact-title', 'A painting<br>that <em>speaks to you?</em>'],
-      ['.contact-copy p', 'Have a question about the paintings, or want to talk about a particular piece? Send Lisa an email.'],
+      ['.contact-copy p', 'Have a question about the paintings, or want to talk about a particular piece? Send me a message using the form and I’ll get back to you.'],
       ['.site-footer p', 'Paintings · Gallery in progress'],
       ['.back-top', 'Back to top ↑'],
       ['.dialog-bar span:nth-child(2)', 'GALLERY'],
