@@ -8,21 +8,21 @@
   const isSpanish = window.location.pathname.startsWith("/es/");
   document.documentElement.lang = isSpanish ? "es" : (isEnglish ? "en" : "nb");
   const copy = isSpanish ? {
-    coming: "Imagen próximamente", placeholder: "Obra ", artwork: "Obra",
+    coming: "Imagen próximamente", sold: "VENDIDA", placeholder: "Obra ", artwork: "Obra",
     artworkLabel: "Ver ", placeholderSuffix: " – próximamente", painting: "Pintura",
     placeholderStatus: "Próximamente", artist: "Pintado por Lisa Wilberg Helmen.",
     placeholderDescription: "Aquí se mostrará una pintura de Lisa Wilberg Helmen. El título, la técnica y las dimensiones se añadirán junto con la imagen.",
     medium: "Técnica", dimensions: "Dimensiones", year: "Año", placeholderMeta: "PRÓXIMAMENTE",
     previous: "Anterior", next: "Siguiente"
   } : isEnglish ? {
-    coming: "Image coming soon", placeholder: "Artwork ", artwork: "Artwork",
+    coming: "Image coming soon", sold: "SOLD", placeholder: "Artwork ", artwork: "Artwork",
     artworkLabel: "View ", placeholderSuffix: " – placeholder", painting: "Painting",
     placeholderStatus: "Placeholder", artist: "Painted by Lisa Wilberg Helmen.",
     placeholderDescription: "A painting by Lisa Wilberg Helmen will be displayed here. The title, medium and dimensions will be added with the image.",
     medium: "Medium", dimensions: "Dimensions", year: "Year", placeholderMeta: "PLACEHOLDER",
     previous: "Previous", next: "Next"
   } : {
-    coming: "Bilde kommer", placeholder: "Verk ", artwork: "Verk",
+    coming: "Bilde kommer", sold: "SOLGT", placeholder: "Verk ", artwork: "Verk",
     artworkLabel: "Se ", placeholderSuffix: " – plassholder", painting: "Maleri",
     placeholderStatus: "Plassholder", artist: "Malt av Lisa Wilberg Helmen.",
     placeholderDescription: "Her kommer et maleri av Lisa Wilberg Helmen. Tittel, teknikk og mål legges til sammen med bildet.",
@@ -67,9 +67,16 @@
     const work = works[selected];
     document.getElementById("dialogIndex").textContent = number(selected) + " / " + works.length;
     document.getElementById("dialogTitle").textContent = work.title.startsWith("Verk ") && isEnglish ? copy.placeholder + number(selected) : work.title;
-    document.getElementById("dialogStatus").textContent = work.image ? copy.painting : copy.placeholderStatus;
+    document.getElementById("dialogStatus").textContent = work.sold ? copy.sold : (work.image ? copy.painting : copy.placeholderStatus);
     document.getElementById("dialogDescription").textContent = work.description || (work.image ? copy.artist : copy.placeholderDescription);
-    document.getElementById("dialogArt").replaceChildren(artworkVisual(work, selected));
+    const dialogArt = document.getElementById("dialogArt");
+    dialogArt.replaceChildren(artworkVisual(work, selected));
+    if (work.sold) {
+      const soldBadge = document.createElement("span");
+      soldBadge.className = "sold-badge";
+      soldBadge.textContent = copy.sold;
+      dialogArt.append(soldBadge);
+    }
     const details = document.getElementById("dialogMetadata");
     details.replaceChildren();
     for (const [label,value] of [[copy.medium,work.medium],[copy.dimensions,work.dimensions],[copy.year,work.year]]) {
@@ -91,6 +98,12 @@
     const image = document.createElement("span");
     image.className = "art-image";
     image.append(artworkVisual(work,index));
+    if (work.sold) {
+      const soldBadge = document.createElement("span");
+      soldBadge.className = "sold-badge";
+      soldBadge.textContent = copy.sold;
+      image.append(soldBadge);
+    }
     const caption = document.createElement("span"), title = document.createElement("span"), arrow = document.createElement("span"), meta = document.createElement("span");
     caption.className = "art-caption";
     title.className = "art-title";
