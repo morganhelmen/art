@@ -1,4 +1,4 @@
-// Artwork images hosted in the Bilder branch. Titles and artwork details can be added when ready.
+// Artwork images hosted in the repository root on main. Titles and artwork details can be added when ready.
 window.ARTWORKS = [
   {
     "id": "verk-01",
@@ -63,7 +63,7 @@ window.ARTWORKS = [
   {
     "id": "verk-07",
     "title": "Verk 07",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_4508417678295351639.jpg",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20260429_103420.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -123,7 +123,7 @@ window.ARTWORKS = [
   {
     "id": "verk-13",
     "title": "Gullgruve",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20261030_200435.jpg",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/FB_IMG_1641832533179.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -153,7 +153,7 @@ window.ARTWORKS = [
   {
     "id": "verk-16",
     "title": "Verk 16",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG20210816095728.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -163,7 +163,7 @@ window.ARTWORKS = [
   {
     "id": "verk-17",
     "title": "Verk 17",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG20211123134047.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -173,7 +173,7 @@ window.ARTWORKS = [
   {
     "id": "verk-18",
     "title": "Verk 18",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG20211216190547.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -183,7 +183,7 @@ window.ARTWORKS = [
   {
     "id": "verk-19",
     "title": "Verk 19",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG_20210726_152111.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
