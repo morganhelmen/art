@@ -127,16 +127,6 @@
     if (event.key === "ArrowRight") { event.preventDefault(); show(selected + 1); }
   });
 
-  // Keep the language selector as ordinary links; each language has its own page.
-  const languageMenu = document.querySelector(".language-switch");
-  if (languageMenu) {
-    const currentLanguage = isSpanish ? "es" : (isEnglish ? "en" : "nb");
-    languageMenu.querySelectorAll("a[lang]").forEach(link => {
-      if (link.lang === currentLanguage) link.setAttribute("aria-current", "page");
-      else link.removeAttribute("aria-current");
-    });
-    languageMenu.setAttribute("aria-label", isSpanish ? "Elegir idioma" : (isEnglish ? "Choose language" : "Velg språk"));
-  }
   if (isEnglish && !window.location.pathname.startsWith("/en/")) {
     const translations = [
       ['.skip-link', 'Skip to gallery'],
