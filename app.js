@@ -36,7 +36,12 @@
     if (work.image) {
       const img = document.createElement("img");
       img.src = work.image;
-      img.alt = work.title;
+      img.alt = isSpanish
+        ? work.title + " – pintura de Lisa Wilberg Helmen"
+        : isEnglish
+          ? work.title + " – painting by Lisa Wilberg Helmen"
+          : work.title + " – maleri av Lisa Wilberg Helmen";
+      img.title = work.title;
       img.loading = "lazy";
       img.decoding = "async";
       return img;
