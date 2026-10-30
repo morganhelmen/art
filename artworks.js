@@ -22,7 +22,7 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-03",
-    "title": "Verk 03",
+    "title": "Morgan",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/20261012_203417.jpg",
     "medium": null,
     "dimensions": null,
@@ -32,7 +32,7 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-04",
-    "title": "Verk 04",
+    "title": "Sjelevenner",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_1793345411999.jpg",
     "medium": null,
     "dimensions": null,
@@ -42,7 +42,7 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-05",
-    "title": "Verk 05",
+    "title": "Empyrean",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_1793345523787.jpg",
     "medium": null,
     "dimensions": null,
@@ -52,7 +52,7 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-06",
-    "title": "Verk 06",
+    "title": "Pan",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_2322150908383179134.jpg",
     "medium": null,
     "dimensions": null,
