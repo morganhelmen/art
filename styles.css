@@ -68,6 +68,12 @@ h1 em, .contact-inner h2 em { color: #8b35c8; }
 .dialog-art { background: #ead8f7; }
 
 
+/* Artist portrait */
+.about-monogram{min-height:0;aspect-ratio:2/3;background:transparent;overflow:hidden}
+.about-monogram img{width:100%;height:100%;object-fit:cover;object-position:center}
+@media(max-width:760px){.about-monogram{min-height:0;aspect-ratio:2/3;max-width:520px}}
+
+
 /* Language selector */
 .language-switch{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
 .language-switch a{text-decoration:none;padding:7px 2px;opacity:.65}
