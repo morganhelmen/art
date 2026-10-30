@@ -75,10 +75,16 @@ h1 em, .contact-inner h2 em { color: #8b35c8; }
 
 
 /* Language selector */
-.language-switch{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
-.language-switch a{text-decoration:none;padding:7px 2px;opacity:.65}
-.language-switch a[aria-current="page"]{opacity:1;color:var(--accent);font-weight:700;border-bottom:1px solid var(--accent)}
-@media(max-width:760px){.language-switch{margin-left:auto;margin-right:2px;gap:6px}.language-switch a{padding:8px 2px}}
+/* Native language dropdown: works without JavaScript and on touch screens. */
+.language-picker{position:relative;z-index:30;margin-left:auto;font-size:10px;letter-spacing:.12em;color:var(--muted)}
+.language-picker summary{list-style:none;display:flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--line);border-radius:30px;padding:9px 13px;min-width:58px;justify-content:center;color:var(--ink);background:rgba(255,255,255,.35)}
+.language-picker summary::-webkit-details-marker{display:none}
+.language-picker summary span{font-size:13px;line-height:1;transition:transform .2s ease}
+.language-picker[open] summary span{transform:rotate(180deg)}
+.language-picker nav{position:absolute;right:0;top:calc(100% + 8px);min-width:138px;padding:6px;background:var(--paper);border:1px solid var(--line);box-shadow:0 12px 30px rgba(40,41,34,.12);border-radius:12px;display:grid;gap:2px}
+.language-picker nav a{display:block;text-decoration:none;padding:9px 11px;border-radius:7px;color:var(--ink);font-size:11px;letter-spacing:.02em}
+.language-picker nav a:hover,.language-picker nav a[aria-current="page"]{background:#ebe7de;color:var(--accent)}
+@media(max-width:760px){.language-picker{margin-left:auto;margin-right:2px}.language-picker summary{padding:8px 11px}}
 
 
 /* Helmen wordmark: shared name, individual purple signature */
