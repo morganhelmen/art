@@ -123,7 +123,7 @@ window.ARTWORKS = [
   {
     "id": "verk-13",
     "title": "Verk 13",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20261030_200435.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -133,7 +133,7 @@ window.ARTWORKS = [
   {
     "id": "verk-14",
     "title": "Verk 14",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20261030_200627.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -143,7 +143,7 @@ window.ARTWORKS = [
   {
     "id": "verk-15",
     "title": "Verk 15",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20261030_200654.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
