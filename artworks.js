@@ -122,7 +122,7 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-13",
-    "title": "Verk 13",
+    "title": "Gullgruve",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20261030_200435.jpg",
     "medium": null,
     "dimensions": null,
