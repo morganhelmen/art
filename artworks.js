@@ -1,11 +1,9 @@
-// Replace each placeholder with Lisa's actual artwork when images and details are ready.
-// image: "/assets/verk-01.jpg", title: "Actual title", medium: "Actual medium", dimensions: "Actual size".
-// Do not invent titles, dates, materials, prices or availability.
+// Artwork images hosted in the Bilder branch. Titles and artwork details can be added when ready.
 window.ARTWORKS = [
   {
     "id": "verk-01",
     "title": "Verk 01",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/20260921_215701.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -15,7 +13,7 @@ window.ARTWORKS = [
   {
     "id": "verk-02",
     "title": "Verk 02",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/20261012_203322.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -25,7 +23,7 @@ window.ARTWORKS = [
   {
     "id": "verk-03",
     "title": "Verk 03",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/20261012_203417.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -35,7 +33,7 @@ window.ARTWORKS = [
   {
     "id": "verk-04",
     "title": "Verk 04",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_1793345411999.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -45,7 +43,7 @@ window.ARTWORKS = [
   {
     "id": "verk-05",
     "title": "Verk 05",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_1793345523787.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -55,7 +53,7 @@ window.ARTWORKS = [
   {
     "id": "verk-06",
     "title": "Verk 06",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_2322150908383179134.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -65,7 +63,7 @@ window.ARTWORKS = [
   {
     "id": "verk-07",
     "title": "Verk 07",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_4508417678295351639.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -75,7 +73,7 @@ window.ARTWORKS = [
   {
     "id": "verk-08",
     "title": "Verk 08",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_5318581180406524715.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -85,7 +83,7 @@ window.ARTWORKS = [
   {
     "id": "verk-09",
     "title": "Verk 09",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_7307338540032469079.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -95,7 +93,7 @@ window.ARTWORKS = [
   {
     "id": "verk-10",
     "title": "Verk 10",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_7728686583497568759.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -105,7 +103,7 @@ window.ARTWORKS = [
   {
     "id": "verk-11",
     "title": "Verk 11",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_858120838675295458.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
@@ -115,7 +113,7 @@ window.ARTWORKS = [
   {
     "id": "verk-12",
     "title": "Verk 12",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/Messenger_creation_91581513-0422-4D9E-B4B7-A156ED82B2F5.png",
     "medium": null,
     "dimensions": null,
     "year": null,
