@@ -2,22 +2,22 @@
 window.ARTWORKS = [
   {
     "id": "verk-01",
-    "title": "Verk 01",
+    "title": "Gullgruve",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/20260921_215701.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
-    "description": null,
+    "description": "Malt med akryl på lerret høsten 2026",
     "palette": "clay"
   },
   {
     "id": "verk-02",
-    "title": "Verk 02",
+    "title": "God Natt",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/20261012_203322.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
-    "description": null,
+    "description": "malt med oljemaling på lerret",
     "palette": "sage"
   },
   {
