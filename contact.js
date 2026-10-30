@@ -3,7 +3,7 @@ document.querySelectorAll(".contact-form").forEach((form) => {
     event.preventDefault();
     const button = form.querySelector(".contact-submit");
     const status = form.querySelector(".contact-status");
-    const originalLabel = button.textContent.trim();
+    const originalLabel = button.childNodes[0].textContent.trim();
     button.disabled = true;
     button.querySelector("span")?.remove();
     button.textContent = form.dataset.sending || "Sending …";
