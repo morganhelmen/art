@@ -94,17 +94,6 @@ window.ARTWORKS = [
     "sold": false
   },
   {
-    "id": "verk-10",
-    "title": "Verk 10",
-    "image": null,
-    "medium": null,
-    "dimensions": null,
-    "year": null,
-    "description": null,
-    "palette": "rose",
-    "sold": false
-  },
-  {
     "id": "verk-11",
     "title": "Følelser",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_858120838675295458.jpg",
@@ -205,11 +194,45 @@ window.ARTWORKS = [
   {
     "id": "verk-20",
     "title": "Verk 20",
-    "image": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Screenshot_20260109_202020_Snapchat.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "sage"
+    "palette": "clay",
+    "sold": false
+  },
+  {
+    "id": "verk-21",
+    "title": "Verk 21",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Snapchat-285819956.jpg",
+    "medium": null,
+    "dimensions": null,
+    "year": null,
+    "description": null,
+    "palette": "sage",
+    "sold": false
+  },
+  {
+    "id": "verk-22",
+    "title": "Verk 22",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Snapchat-755295878.jpg",
+    "medium": null,
+    "dimensions": null,
+    "year": null,
+    "description": null,
+    "palette": "sand",
+    "sold": false
+  },
+  {
+    "id": "verk-23",
+    "title": "Verk 23",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Snapchat-942619201.jpg",
+    "medium": null,
+    "dimensions": null,
+    "year": null,
+    "description": null,
+    "palette": "rose",
+    "sold": false
   }
 ];
