@@ -183,39 +183,40 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-19",
-    "title": "Verk 19",
+    "title": "Dansende Par",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG_20210726_152111.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "clay"
+    "palette": "clay",
+    "sold": true
   },
   {
     "id": "verk-20",
-    "title": "Verk 20",
+    "title": "Julevalp",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Screenshot_20260109_202020_Snapchat.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
     "description": null,
     "palette": "clay",
-    "sold": false
+    "sold": true
   },
   {
     "id": "verk-21",
-    "title": "Verk 21",
+    "title": "Hører Sammen",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Snapchat-285819956.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
     "description": null,
     "palette": "sage",
-    "sold": false
+    "sold": true
   },
   {
     "id": "verk-22",
-    "title": "Verk 22",
+    "title": "Sommerkjærlighet",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Snapchat-755295878.jpg",
     "medium": null,
     "dimensions": null,
@@ -226,35 +227,13 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-23",
-    "title": "Verk 23",
+    "title": "Rosedrager",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Snapchat-942619201.jpg",
     "medium": null,
     "dimensions": null,
     "year": null,
     "description": null,
     "palette": "rose",
-    "sold": false
-  },
-  {
-    "id": "verk-24",
-    "title": "Gullgruve",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_4508417678295351639.jpg",
-    "medium": null,
-    "dimensions": null,
-    "year": null,
-    "description": null,
-    "palette": "blue",
-    "sold": false
-  },
-  {
-    "id": "verk-25",
-    "title": "Verk 25",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_7728686583497568759.jpg",
-    "medium": null,
-    "dimensions": null,
-    "year": null,
-    "description": null,
-    "palette": "linen",
     "sold": false
   }
 ];
