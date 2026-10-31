@@ -264,3 +264,24 @@ body{font-size:17px}
   .contact-status,.site-footer p,.back-top,.dialog-details dl,
   .peek-heading>p:last-child{font-size:1.12em}
 }
+
+
+/* More prominent SOLD markers on gallery thumbnails and artwork detail view */
+.sold-badge{
+  top:22px;right:22px;padding:12px 17px;
+  background:#7d174b;color:#fff;
+  font-size:15px;font-weight:800;letter-spacing:.2em;
+  border:2px solid #fff;box-shadow:0 4px 14px #24112f55;
+  transform:rotate(4deg);
+}
+.dialog-art .sold-badge{
+  top:28px;right:28px;padding:16px 22px;
+  font-size:19px;letter-spacing:.22em;
+  border-width:3px;box-shadow:0 6px 20px #24112f66;
+}
+.gallery-heading{display:block;margin-bottom:28px}
+.gallery-heading>.eyebrow{margin:0}
+@media(max-width:760px){
+  .art-image .sold-badge{top:12px;right:12px;padding:8px 10px;font-size:11px;letter-spacing:.15em;border-width:1px}
+  .dialog-art .sold-badge{top:20px;right:20px;padding:12px 16px;font-size:16px}
+}
