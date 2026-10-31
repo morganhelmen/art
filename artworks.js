@@ -1,4 +1,4 @@
-// Artwork images hosted in the repository root on main. Artwork details are added as provided by the artist.
+// Artwork images hosted in the repository root or the Bilder upload branch. Artwork details are added as provided by the artist.
 window.ARTWORKS = [
   {
     "id": "verk-01",
@@ -233,6 +233,28 @@ window.ARTWORKS = [
     "year": null,
     "description": null,
     "palette": "rose",
+    "sold": false
+  },
+  {
+    "id": "verk-24",
+    "title": "Verk 24",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_4508417678295351639.jpg",
+    "medium": null,
+    "dimensions": null,
+    "year": null,
+    "description": null,
+    "palette": "blue",
+    "sold": false
+  },
+  {
+    "id": "verk-25",
+    "title": "Verk 25",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_7728686583497568759.jpg",
+    "medium": null,
+    "dimensions": null,
+    "year": null,
+    "description": null,
+    "palette": "linen",
     "sold": false
   }
 ];
