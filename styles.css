@@ -239,3 +239,28 @@ body::before{
   opacity:.10;
   mix-blend-mode:multiply;
 }
+
+
+/* More readable body copy throughout the site */
+body{font-size:17px}
+.hero-description,.hero-note p,.underlined-link,.display-caption,.display-footnote,
+.desktop-nav a,.mobile-menu nav a,.language-picker,.language-picker nav a,
+.gallery-heading>p,.gallery-toolbar p,.view-options button,.art-caption .art-title,
+.art-meta,.gallery-footnote,.about-copy p:not(.eyebrow),.quiet-label,
+.contact-copy p,.contact-coming,.contact-form>label,.contact-form input,
+.contact-form textarea,.contact-submit,.contact-status,.contact-fallback,
+.site-footer p,.back-top,.dialog-bar,.dialog-details p:not(.eyebrow),
+.dialog-details dl,.dialog-navigation button,.keyboard-help,
+.peek-heading>p:last-child,.peek-controls,.peek-count{
+  font-size:1.15em;
+}
+.eyebrow{font-size:1.1em}
+@media(max-width:760px){
+  body{font-size:17px}
+  .hero-description,.hero-note p,.display-caption,.display-footnote,
+  .gallery-heading>p,.gallery-toolbar p,.view-options button,.art-meta,
+  .about-copy p:not(.eyebrow),.contact-copy p,.contact-coming,
+  .contact-form>label,.contact-form input,.contact-form textarea,
+  .contact-status,.site-footer p,.back-top,.dialog-details dl,
+  .peek-heading>p:last-child{font-size:1.12em}
+}
