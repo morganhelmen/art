@@ -285,3 +285,50 @@ body{font-size:17px}
   .art-image .sold-badge{top:12px;right:12px;padding:8px 10px;font-size:11px;letter-spacing:.15em;border-width:1px}
   .dialog-art .sold-badge{top:20px;right:20px;padding:12px 16px;font-size:16px}
 }
+
+
+/* Keep slideshow navigation and image counter in separate, non-overlapping columns. */
+.peek-stage{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  column-gap:14px;
+}
+.peek-art{grid-column:1 / -1;width:100%;min-width:0}
+.peek-controls{
+  grid-column:1;
+  min-width:0;
+  padding-right:0;
+  margin-top:22px;
+}
+.peek-count{
+  position:static;
+  grid-column:2;
+  align-self:center;
+  justify-content:flex-end;
+  min-width:0;
+  margin-top:22px;
+  white-space:nowrap;
+}
+@media(max-width:760px){
+  .peek-stage{column-gap:10px}
+  .peek-controls{margin-top:18px;padding-right:0;gap:8px}
+  .peek-count{margin-top:18px;bottom:auto;font-size:10px}
+}
+
+/* A more compact language selector, especially in the header. */
+.language-picker{font-size:10px;letter-spacing:.08em}
+.language-picker summary{
+  min-width:46px;
+  gap:6px;
+  padding:6px 9px;
+  font-size:10px;
+  line-height:1.2;
+}
+.language-picker summary span{font-size:11px}
+.language-picker nav{min-width:120px}
+.language-picker nav a{padding:7px 9px;font-size:10px}
+@media(max-width:760px){
+  .language-picker summary{min-width:42px;padding:5px 8px;gap:5px;font-size:9px}
+  .language-picker summary span{font-size:10px}
+}
