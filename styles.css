@@ -222,3 +222,20 @@ h1 em, .contact-inner h2 em { color: #8b35c8; }
 @media(max-width:760px){
   .peek-art{min-height:0;max-height:none;aspect-ratio:4 / 3}
 }
+
+
+/* Subtle lilac botanical watermark across the gallery */
+body{position:relative;isolation:isolate}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:url("https://raw.githubusercontent.com/morganhelmen/art/main/botanical-background.jpg");
+  background-repeat:repeat;
+  background-position:center top;
+  background-size: min(560px, 72vw) auto;
+  opacity:.10;
+  mix-blend-mode:multiply;
+}
