@@ -332,3 +332,36 @@ body{font-size:17px}
   .language-picker summary{min-width:42px;padding:5px 8px;gap:5px;font-size:9px}
   .language-picker summary span{font-size:10px}
 }
+
+/* Carry the wordmark's italic serif into navigation and gallery controls. */
+.desktop-nav a,.mobile-menu nav a,
+.gallery-toolbar p,.view-options button{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:400;
+  letter-spacing:-.025em;
+}
+.desktop-nav a{font-size:22px;line-height:1.35}
+.desktop-nav a>span{font-style:normal;letter-spacing:.04em;color:var(--muted)}
+.desktop-nav a:last-child{border-bottom-color:var(--line)}
+.mobile-menu nav a{font-size:21px}
+.gallery-toolbar{padding-block:18px;gap:20px}
+.gallery-toolbar p{font-size:22px;line-height:1.4;color:var(--ink);gap:6px}
+.gallery-toolbar .small-dot{background:var(--accent);margin-right:6px}
+.view-options{gap:4px;padding:4px;border:1px solid var(--line);border-radius:5px;background:#fffaff40}
+.view-options button{
+  font-size:21px;line-height:1.35;padding:8px 14px;gap:9px;
+  color:var(--muted);transition:background .2s,color .2s,border-color .2s;
+}
+.gallery-toolbar .view-options button[aria-pressed="true"]{
+  background:#fffaff;border-color:#c9a4e5;color:var(--ink);
+}
+.view-options svg{color:var(--accent);flex-shrink:0}
+@media(hover:hover){
+  .view-options button:hover{color:var(--ink);background:#fffaff80}
+}
+@media(max-width:760px){
+  .gallery-toolbar{flex-wrap:wrap;gap:12px;padding-block:14px}
+  .gallery-toolbar p{font-size:19px}
+  .view-options button{font-size:18px;padding:7px 10px;min-height:44px}
+}
