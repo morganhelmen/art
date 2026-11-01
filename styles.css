@@ -359,3 +359,8 @@ body{font-size:16px}
   .gallery-toolbar p{font-size:16px}
   .view-options button{font-size:16px;padding:7px 10px;min-height:44px}
 }
+
+
+/* Align the purple signature dot with the height of the H */
+.signature .signature-dot{margin-bottom:0}
+@media(max-width:760px){.signature .signature-dot{margin-bottom:0}}
