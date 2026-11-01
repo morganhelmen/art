@@ -361,9 +361,9 @@ body{font-size:16px}
 }
 
 
-/* Helmen logo: Inter Black italic with the purple signature dot at the upper corner */
-.brand-lockup{position:relative;display:inline-block;line-height:1;vertical-align:baseline;padding-right:.18em}
-.brand-lockup .brand-name{font-family:'Inter',Arial,Helvetica,sans-serif;font-style:italic;font-weight:900;letter-spacing:-.075em;color:inherit}
+/* Helmen logo: uppercase Inter Medium italic with the purple signature dot */
+.brand-lockup{position:relative;display:inline-block;line-height:1;vertical-align:baseline;padding-right:.22em}
+.brand-lockup .brand-name{font-family:'Inter',Arial,Helvetica,sans-serif;font-style:italic;font-weight:500;font-synthesis:none;text-transform:uppercase;letter-spacing:.035em;color:inherit}
 .brand-lockup .signature-dot{position:absolute;top:-.08em;right:-.02em;width:.15em;height:.15em;min-width:5px;min-height:5px;margin:0;background:#8b35c8}
 .signature .brand-lockup .brand-name{font-size:1em}
 .footer-signature .brand-lockup .brand-name{font-size:1em}
