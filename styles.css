@@ -364,3 +364,8 @@ body{font-size:16px}
 /* Align the purple signature dot with the height of the H */
 .signature .signature-dot{margin-bottom:0}
 @media(max-width:760px){.signature .signature-dot{margin-bottom:0}}
+
+
+/* Raise the purple dot to the cap-height, level with the top of the H */
+.signature .signature-dot{position:relative;top:-.47em;margin-bottom:0}
+@media(max-width:760px){.signature .signature-dot{top:-.47em;margin-bottom:0}}
