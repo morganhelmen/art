@@ -402,13 +402,13 @@ body{font-size:16px}
   display:flex;align-items:center;justify-content:center;gap:clamp(18px,3vw,38px);
   padding:8px 18px;max-width:calc(100vw - 28px);white-space:nowrap;
   background:transparent;border:0;box-shadow:none;
-  color:#75677e;font-family:var(--serif);font-style:italic;font-size:14px;
-  opacity:.76;transition:opacity .2s ease;
+  color:#62536b;font-family:var(--serif);font-style:italic;font-size:14px;
+  opacity:.88;transition:opacity .2s ease;
 }
 .scroll-nav:hover{opacity:1}
 .scroll-nav a{text-decoration:none;border:0;box-shadow:none;background:none;padding:2px 0;color:inherit;transition:color .2s ease}
 .scroll-nav a:hover{color:#9b78ad;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:600px){
- .scroll-nav{bottom:12px;gap:clamp(12px,4vw,22px);font-size:12px;padding:7px 10px;opacity:.88}
+ .scroll-nav{bottom:12px;gap:clamp(12px,4vw,22px);font-size:12px;padding:7px 10px;opacity:.94}
 }
 @media(prefers-reduced-motion:reduce){.scroll-nav,.scroll-nav a{transition:none}}
