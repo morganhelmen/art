@@ -183,6 +183,9 @@
       ['.mobile-menu nav a[href="#om"]', 'About Lisa'],
       ['.mobile-menu nav a[href="#kontakt"]', 'Contact'],
       ['.signature small', 'PAINTINGS'],
+      ['.scroll-nav a[href="#galleri"]', 'To the gallery'],
+      ['.scroll-nav a[href="#om"]', 'About the artist'],
+      ['.scroll-nav a[href="#topp"]', 'Back to top ↑'],
       ['.hero-copy .eyebrow', '<span class="little-line"></span> A DIGITAL GALLERY'],
       ['#hero-title', 'A space<br>for <em>paintings.</em>'],
       ['.hero-intro', 'By Lisa Wilberg Helmen.'],
@@ -253,6 +256,14 @@
       if (element) element.textContent = value;
     }
     document.querySelector('.about-section')?.setAttribute('aria-label', 'Sobre Lisa');
+    const scrollNav = document.querySelector('.scroll-nav');
+    if (scrollNav) {
+      scrollNav.setAttribute('aria-label', 'Navegación rápida');
+      const links = scrollNav.querySelectorAll('a');
+      if (links[0]) links[0].textContent = 'Ir a la galería';
+      if (links[1]) links[1].textContent = 'Sobre la artista';
+      if (links[2]) links[2].textContent = 'Volver arriba ↑';
+    }
   }
 
 
