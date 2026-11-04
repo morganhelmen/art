@@ -234,8 +234,8 @@
   }
 
 
-  // Independent ten-image preview carousel. Add image URLs in slideshow.js.
-  const peekImages = Array.isArray(window.SNEAK_PEEK) ? window.SNEAK_PEEK.slice(0,10) : [];
+  // Independent eleven-image preview carousel. Add image URLs in slideshow.js.
+  const peekImages = Array.isArray(window.SNEAK_PEEK) ? window.SNEAK_PEEK.slice(0,11) : [];
   const peekArt = document.getElementById("peekArt");
   if (peekArt) {
     let peekIndex = 0;
@@ -259,9 +259,9 @@
       current.textContent = String(peekIndex+1).padStart(2,"0");
       dots.querySelectorAll("button").forEach((dot,i)=>dot.setAttribute("aria-current",String(i===peekIndex)));
     };
-    for(let i=0;i<10;i++){const dot=document.createElement("button");dot.type="button";dot.setAttribute("aria-label",(isSpanish?"Imagen ":isEnglish?"Image ":"Bilde ")+(i+1));dot.addEventListener("click",()=>{peekIndex=i;renderPeek();});dots.append(dot);}
-    document.getElementById("peekPrev").addEventListener("click",()=>{peekIndex=(peekIndex+9)%10;renderPeek();});
-    document.getElementById("peekNext").addEventListener("click",()=>{peekIndex=(peekIndex+1)%10;renderPeek();});
+    for(let i=0;i<11;i++){const dot=document.createElement("button");dot.type="button";dot.setAttribute("aria-label",(isSpanish?"Imagen ":isEnglish?"Image ":"Bilde ")+(i+1));dot.addEventListener("click",()=>{peekIndex=i;renderPeek();});dots.append(dot);}
+    document.getElementById("peekPrev").addEventListener("click",()=>{peekIndex=(peekIndex+10)%11;renderPeek();});
+    document.getElementById("peekNext").addEventListener("click",()=>{peekIndex=(peekIndex+1)%11;renderPeek();});
     renderPeek();
   }
 
