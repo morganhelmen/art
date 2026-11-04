@@ -30,6 +30,7 @@
     previous: "Forrige", next: "Neste"
   };
   let selected = 0;
+  let imageIndex = 0;
   let opener = null;
   const number = value => String(value + 1).padStart(2, "0");
   function artworkVisual(work, index) {
@@ -62,15 +63,38 @@
     surface.append(center, mark);
     return surface;
   }
+  function renderDialogArtwork(work, index) {
+    const dialogArt = document.getElementById("dialogArt");
+    const sources = Array.isArray(work.images) && work.images.length ? work.images : (work.image ? [work.image] : []);
+    dialogArt.replaceChildren();
+    if (!sources.length) { dialogArt.append(artworkVisual(work, index)); return; }
+    const img = document.createElement("img");
+    img.src = sources[imageIndex % sources.length];
+    img.alt = work.title + " – " + (isEnglish ? "painting by Lisa Wilberg Helmen" : isSpanish ? "pintura de Lisa Wilberg Helmen" : "maleri av Lisa Wilberg Helmen");
+    img.loading = "eager"; img.decoding = "async";
+    dialogArt.append(img);
+    if (sources.length > 1) {
+      const controls = document.createElement("div"); controls.className = "artwork-image-controls";
+      const previous = document.createElement("button"); previous.type = "button"; previous.textContent = "←";
+      previous.setAttribute("aria-label", isEnglish ? "Previous image" : isSpanish ? "Imagen anterior" : "Forrige bilde");
+      const count = document.createElement("span");
+      const next = document.createElement("button"); next.type = "button"; next.textContent = "→";
+      next.setAttribute("aria-label", isEnglish ? "Next image" : isSpanish ? "Imagen siguiente" : "Neste bilde");
+      const refresh = () => { img.src = sources[imageIndex]; count.textContent = String(imageIndex+1).padStart(2,"0") + " / " + String(sources.length).padStart(2,"0"); };
+      previous.addEventListener("click", () => { imageIndex = (imageIndex + sources.length - 1) % sources.length; refresh(); });
+      next.addEventListener("click", () => { imageIndex = (imageIndex + 1) % sources.length; refresh(); });
+      controls.append(previous,count,next); dialogArt.append(controls); refresh();
+    }
+  }
   function show(index) {
     selected = (index + works.length) % works.length;
+    imageIndex = 0;
     const work = works[selected];
     document.getElementById("dialogIndex").textContent = number(selected) + " / " + works.length;
     document.getElementById("dialogTitle").textContent = work.title.startsWith("Verk ") && isEnglish ? copy.placeholder + number(selected) : work.title;
     document.getElementById("dialogStatus").textContent = work.sold ? copy.sold : (work.image ? copy.painting : copy.placeholderStatus);
     document.getElementById("dialogDescription").textContent = work.description || (work.image ? copy.artist : copy.placeholderDescription);
-    const dialogArt = document.getElementById("dialogArt");
-    dialogArt.replaceChildren(artworkVisual(work, selected));
+    renderDialogArtwork(work, selected);
     if (work.sold) {
       const soldBadge = document.createElement("span");
       soldBadge.className = "sold-badge";
@@ -148,7 +172,7 @@
   if (isEnglish && !window.location.pathname.startsWith("/en/")) {
     const translations = [
       ['.skip-link', 'Skip to gallery'],
-      ['.desktop-nav a[href="#galleri"]', 'Gallery <span>20</span>'],
+      ['.desktop-nav a[href="#galleri"]', 'Gallery <span>27</span>'],
       ['.desktop-nav a[href="#om"]', 'About Lisa'],
       ['.desktop-nav a[href="#kontakt"]', 'Contact <span aria-hidden="true">↗</span>'],
       ['.mobile-menu summary', 'Menu <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h16M4 16h16"/></svg>'],
