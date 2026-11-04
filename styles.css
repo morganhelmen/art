@@ -395,3 +395,32 @@ body{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){.hero-actions .underlined-link{transition:none}}
 
+
+
+/* Moderated public guestbook */
+.guestbook-section{padding:82px 0 88px;background:#f4ebfa;border-top:1px solid #dfc9f2}
+.guestbook-inner{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.guestbook-heading .eyebrow{color:var(--muted);margin-bottom:20px}
+.guestbook-heading h2{font:normal clamp(38px,4.4vw,58px)/1.05 var(--serif);letter-spacing:-.045em;margin:0 0 20px}
+.guestbook-heading h2 em{color:var(--accent)}
+.guestbook-heading>p:last-child{max-width:390px;color:#634878;font-size:16px;line-height:1.8}
+.guestbook-content{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:start}
+.guestbook-note{padding:20px 0;border-top:1px solid #d5c0e4;color:#634878}
+.guestbook-note-mark{display:block;font:normal 52px/.8 var(--serif);color:#a77ac7}
+.guestbook-note p{font:italic 19px/1.5 var(--serif);margin:14px 0}
+.guestbook-note .guestbook-empty{font:13px/1.7 Arial,sans-serif;color:#806b8e;margin-top:28px}
+.guestbook-form{display:grid;gap:15px}
+.guestbook-form>label{display:grid;gap:6px;color:#634878;font-size:14px}
+.guestbook-form>label span{font-size:12px;color:#806b8e}
+.guestbook-form input,.guestbook-form textarea{width:100%;border:1px solid #c7a7df;border-radius:2px;background:#fffaff;color:#291638;padding:12px 13px;font:16px Arial,sans-serif}
+.guestbook-form textarea{resize:vertical;min-height:112px;line-height:1.6}
+.guestbook-form input:focus,.guestbook-form textarea:focus{outline:2px solid #8b35c8;outline-offset:1px}
+.guestbook-privacy{font-size:12px;line-height:1.6;color:#715b83;margin:0}
+.guestbook-submit{display:flex;justify-content:space-between;align-items:center;gap:20px;width:100%;max-width:230px;padding:13px 16px;background:#291638;color:#fffaff;font-size:14px;text-align:left}
+.guestbook-submit span{font-size:17px}
+.guestbook-submit:hover{background:#713b96}
+.guestbook-submit:disabled{opacity:.6;cursor:wait}
+.guestbook-status{min-height:1.5em;margin:0;color:#634878;font-size:13px}
+.guestbook-honeypot{position:absolute!important;left:-5000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+@media(max-width:900px){.guestbook-inner{grid-template-columns:1fr;gap:24px}.guestbook-content{grid-template-columns:.8fr 1.2fr;gap:28px}}
+@media(max-width:600px){.guestbook-section{padding:58px 0 64px}.guestbook-content{grid-template-columns:1fr;gap:14px}.guestbook-note{padding:14px 0}.guestbook-note .guestbook-empty{margin-top:14px}.guestbook-submit{max-width:none}}
