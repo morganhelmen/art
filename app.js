@@ -29,6 +29,8 @@
     medium: "Teknikk", dimensions: "Mål", year: "År", placeholderMeta: "PLASSHOLDER",
     previous: "Forrige", next: "Neste"
   };
+  const titleFor = work => isSpanish ? (work.titleEs || work.title) : isEnglish ? (work.titleEn || work.title) : work.title;
+  const mediumFor = work => isSpanish ? (work.mediumEs || work.medium) : isEnglish ? (work.mediumEn || work.medium) : work.medium;
   let selected = 0;
   let imageIndex = 0;
   let opener = null;
@@ -38,11 +40,11 @@
       const img = document.createElement("img");
       img.src = work.image;
       img.alt = isSpanish
-        ? work.title + " – pintura de Lisa Wilberg Helmen"
+        ? titleFor(work) + " – pintura de Lisa Wilberg Helmen"
         : isEnglish
-          ? work.title + " – painting by Lisa Wilberg Helmen"
-          : work.title + " – maleri av Lisa Wilberg Helmen";
-      img.title = work.title;
+          ? titleFor(work) + " – painting by Lisa Wilberg Helmen"
+          : titleFor(work) + " – maleri av Lisa Wilberg Helmen";
+      img.title = titleFor(work);
       img.loading = "lazy";
       img.decoding = "async";
       return img;
@@ -70,7 +72,7 @@
     if (!sources.length) { dialogArt.append(artworkVisual(work, index)); return; }
     const img = document.createElement("img");
     img.src = sources[imageIndex % sources.length];
-    img.alt = work.title + " – " + (isEnglish ? "painting by Lisa Wilberg Helmen" : isSpanish ? "pintura de Lisa Wilberg Helmen" : "maleri av Lisa Wilberg Helmen");
+    img.alt = titleFor(work) + " – " + (isEnglish ? "painting by Lisa Wilberg Helmen" : isSpanish ? "pintura de Lisa Wilberg Helmen" : "maleri av Lisa Wilberg Helmen");
     img.loading = "eager"; img.decoding = "async";
     dialogArt.append(img);
     if (sources.length > 1) {
@@ -91,7 +93,7 @@
     imageIndex = 0;
     const work = works[selected];
     document.getElementById("dialogIndex").textContent = number(selected) + " / " + works.length;
-    document.getElementById("dialogTitle").textContent = work.title.startsWith("Verk ") && isEnglish ? copy.placeholder + number(selected) : work.title;
+    document.getElementById("dialogTitle").textContent = work.title.startsWith("Verk ") && isEnglish ? copy.placeholder + number(selected) : titleFor(work);
     document.getElementById("dialogStatus").textContent = work.sold ? copy.sold : (work.image ? copy.painting : copy.placeholderStatus);
     document.getElementById("dialogDescription").textContent = work.description || (work.image ? copy.artist : copy.placeholderDescription);
     renderDialogArtwork(work, selected);
@@ -103,7 +105,7 @@
     }
     const details = document.getElementById("dialogMetadata");
     details.replaceChildren();
-    for (const [label,value] of [[copy.medium,work.medium],[copy.dimensions,work.dimensions],[copy.year,work.year]]) {
+    for (const [label,value] of [[copy.medium,mediumFor(work)],[copy.dimensions,work.dimensions],[copy.year,work.year]]) {
       if (!value) continue;
       const row = document.createElement("div"), term = document.createElement("dt"), definition = document.createElement("dd");
       term.textContent = label;
@@ -118,7 +120,7 @@
     const button = document.createElement("button");
     button.className = "art-button";
     button.type = "button";
-    button.setAttribute("aria-label", (isEnglish ? copy.artworkLabel + (work.title.startsWith("Verk ") ? copy.placeholder + number(index) : work.title) : copy.artworkLabel + work.title) + (work.image ? "" : copy.placeholderSuffix));
+    button.setAttribute("aria-label", (isEnglish ? copy.artworkLabel + (work.title.startsWith("Verk ") ? copy.placeholder + number(index) : titleFor(work)) : copy.artworkLabel + titleFor(work)) + (work.image ? "" : copy.placeholderSuffix));
     const image = document.createElement("span");
     image.className = "art-image";
     image.append(artworkVisual(work,index));
@@ -131,12 +133,12 @@
     const caption = document.createElement("span"), title = document.createElement("span"), arrow = document.createElement("span"), meta = document.createElement("span");
     caption.className = "art-caption";
     title.className = "art-title";
-    title.textContent = work.title.startsWith("Verk ") && isEnglish ? copy.placeholder + number(index) : work.title;
+    title.textContent = work.title.startsWith("Verk ") && isEnglish ? copy.placeholder + number(index) : titleFor(work);
     arrow.innerHTML = '<svg aria-hidden="true" viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.2"><path d="m4 16 12-12M4 4h12v12"/></svg>';
     arrow.setAttribute("aria-hidden", "true");
     caption.append(title,arrow);
     meta.className = "art-meta";
-    meta.textContent = work.image ? [work.medium,work.dimensions].filter(Boolean).join(" · ") : "PLASSHOLDER";
+    meta.textContent = work.image ? [mediumFor(work),work.dimensions].filter(Boolean).join(" · ") : (isEnglish ? "PLACEHOLDER" : isSpanish ? "PRÓXIMAMENTE" : "PLASSHOLDER");
     button.append(image,caption,meta);
     button.addEventListener("click", () => {
       opener = button;
