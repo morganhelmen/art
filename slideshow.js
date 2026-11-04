@@ -1,4 +1,4 @@
-// Ten independent image slots for the homepage preview.
+// Eleven independent image slots for the homepage preview.
 window.SNEAK_PEEK = [
   "/FB_IMG_1793725456275.jpg",
   "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_4508417678295351639.jpg",
@@ -7,7 +7,8 @@ window.SNEAK_PEEK = [
   "/Lyra-i-Oldemors-Hage_innblikk05_Akryl(Miniatyr).jpg",
   null,
   "/Kunst_Rundt_Elva2026_innblikk07.jpg",
-  null,
+  "/Morgan_innblikk8_akryl.jpg",
   "/Sovende-Lyra_innblikk09_Oljemaling_2020.jpg",
-  "/Innblikk10.jpg"
+  "/Innblikk10.jpg",
+  "/Innblikk08.jpg"
 ];
