@@ -50,6 +50,10 @@ window.ARTWORKS = [
     "id": "verk-04",
     "title": "Glød (Lyser i mørket)",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Glød(Lyser I mørket)_verk04_Akryl_2026.jpg",
+    "images": [
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Glød(Lyser I mørket)_verk04_Akryl_2026.jpg",
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Glød(Lyser I mørket)_verk04_Akryl_2026(2).jpg"
+    ],
     "medium": "Akryl",
     "dimensions": null,
     "year": "2026",
@@ -194,6 +198,11 @@ window.ARTWORKS = [
     "id": "verk-14",
     "title": "Mors Vrede",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Mors-Vrede_verk14_Oljemaling(Fingermalt)_2021.jpg",
+    "images": [
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Mors-Vrede_verk14_Oljemaling(Fingermalt)_2021.jpg",
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Mors-Vrede_verk14_Oljemaling(Fingermalt)_2021(2).jpg",
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Mors-Vrede_verk14_Oljemaling(Fingermalt)_2021(3).jpg"
+    ],
     "medium": "Oljemaling (fingermalt)",
     "dimensions": null,
     "year": "2021",
@@ -356,6 +365,10 @@ window.ARTWORKS = [
     "id": "verk-25",
     "title": "Kong Herodes",
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Kong-Herodes_Verk25_Oljemaling_2021.jpg",
+    "images": [
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Kong-Herodes_Verk25_Oljemaling_2021.jpg",
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Kong-Herodes_Verk25_Oljemaling-Prosess_2021(2).jpg"
+    ],
     "medium": "Oljemaling",
     "dimensions": null,
     "year": "2021",
@@ -393,5 +406,19 @@ window.ARTWORKS = [
     "titleEs": "Pareja bailando",
     "mediumEn": "Oil paint",
     "mediumEs": "Pintura al óleo"
+  }
+  ,{
+    "id": "verk-28",
+    "title": "Sommerflørt",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Sommerflørt_verk28_blekk-og-akvarell_2025.jpg",
+    "medium": "Blekk og akvarell",
+    "dimensions": null,
+    "year": "2025",
+    "description": null,
+    "palette": "rose",
+    "titleEn": "Summer Flirt",
+    "titleEs": "Coqueteo de verano",
+    "mediumEn": "Ink and watercolor",
+    "mediumEs": "Tinta y acuarela"
   }
 ];
