@@ -187,6 +187,9 @@
       ['#hero-title', 'A space<br>for <em>paintings.</em>'],
       ['.hero-intro', 'By Lisa Wilberg Helmen.'],
       ['.hero-description', 'Welcome. A place where each painting can be seen, one at a time.'],
+      ['.floating-gallery', 'Explore the gallery <span aria-hidden="true">↓</span>'],
+      ['.floating-artist', 'About the artist <span aria-hidden="true">↓</span>'],
+      ['.floating-top', 'Back to top <span aria-hidden="true">↑</span>'],
       ['.underlined-link:not(.artist-link)', 'Explore the gallery <span aria-hidden="true">↓</span>'],
       ['.artist-link', 'About the artist <span aria-hidden="true">↓</span>'],
       ['.hero-note p', 'The gallery is taking shape.<br>Artwork will be added soon. For now, these are placeholders.'],
@@ -239,6 +242,16 @@
 
 
   if (isSpanish) {
+    const floatingLabels = [
+      ['.floating-gallery', 'Ir a la galería <span aria-hidden="true">↓</span>'],
+      ['.floating-artist', 'Sobre la artista <span aria-hidden="true">↓</span>'],
+      ['.floating-top', 'Volver arriba <span aria-hidden="true">↑</span>']
+    ];
+    for (const [selector, value] of floatingLabels) {
+      const element = document.querySelector(selector);
+      if (element) element.innerHTML = value;
+    }
+
     const spanishAbout = [
       ['.about-copy .eyebrow', 'SOBRE LA ARTISTA'],
       ['.about-copy .about-lead', 'Me llamo Lisa, tengo 36 años y vivo en Frognes, Hokksund, con mi prometido, nuestros hijos y nuestro perro, Pan.'],
