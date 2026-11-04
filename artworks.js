@@ -12,7 +12,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2026",
     "description": null,
-    "palette": "clay"
+    "palette": "clay",
+    "titleEn": "Gold Mine",
+    "titleEs": "Mina de oro",
+    "mediumEn": "Acrylic",
+    "mediumEs": "Acrílico"
   },
   {
     "id": "verk-02",
@@ -22,7 +26,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2026",
     "description": null,
-    "palette": "sage"
+    "palette": "sage",
+    "titleEn": "Soulmates",
+    "titleEs": "Almas gemelas",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-03",
@@ -32,7 +40,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "sand"
+    "palette": "sand",
+    "titleEn": "Morgan",
+    "titleEs": "Morgan",
+    "mediumEn": "Acrylic",
+    "mediumEs": "Acrílico"
   },
   {
     "id": "verk-04",
@@ -42,7 +54,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2026",
     "description": null,
-    "palette": "rose"
+    "palette": "rose",
+    "titleEn": "Glow (Glows in the Dark)",
+    "titleEs": "Brillo (Brilla en la oscuridad)",
+    "mediumEn": "Acrylic",
+    "mediumEs": "Acrílico"
   },
   {
     "id": "verk-05",
@@ -52,7 +68,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2023",
     "description": null,
-    "palette": "blue"
+    "palette": "blue",
+    "titleEn": "Silly Dog",
+    "titleEs": "Perro travieso",
+    "mediumEn": "Acrylic",
+    "mediumEs": "Acrílico"
   },
   {
     "id": "verk-06",
@@ -66,7 +86,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2024",
     "description": null,
-    "palette": "linen"
+    "palette": "linen",
+    "titleEn": "Pan",
+    "titleEs": "Pan",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-07",
@@ -76,7 +100,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2024",
     "description": null,
-    "palette": "clay"
+    "palette": "clay",
+    "titleEn": "Lyra's Scar",
+    "titleEs": "La cicatriz de Lyra",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-08",
@@ -86,7 +114,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2025",
     "description": null,
-    "palette": "sage"
+    "palette": "sage",
+    "titleEn": "Grandmother",
+    "titleEs": "Abuela",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-09",
@@ -96,7 +128,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2021",
     "description": null,
-    "palette": "sand"
+    "palette": "sand",
+    "titleEn": "Sunrise",
+    "titleEs": "Amanecer",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-10",
@@ -106,7 +142,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2023",
     "description": null,
-    "palette": "rose"
+    "palette": "rose",
+    "titleEn": "Gammern Casper",
+    "titleEs": "Gammern Casper",
+    "mediumEn": "Acrylic",
+    "mediumEs": "Acrílico"
   },
   {
     "id": "verk-11",
@@ -116,7 +156,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2025",
     "description": null,
-    "palette": "blue"
+    "palette": "blue",
+    "titleEn": "Lyra in the Alps",
+    "titleEs": "Lyra en los Alpes",
+    "mediumEn": "Acrylic",
+    "mediumEs": "Acrílico"
   },
   {
     "id": "verk-12",
@@ -126,7 +170,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2026",
     "description": null,
-    "palette": "linen"
+    "palette": "linen",
+    "titleEn": "El Rey Pan",
+    "titleEs": "El Rey Pan",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-13",
@@ -136,7 +184,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2021",
     "description": null,
-    "palette": "clay"
+    "palette": "clay",
+    "titleEn": "Forest Fae",
+    "titleEs": "Hada del bosque",
+    "mediumEn": "Oil paint (finger-painted)",
+    "mediumEs": "Pintura al óleo (pintada con los dedos)"
   },
   {
     "id": "verk-14",
@@ -146,7 +198,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2021",
     "description": null,
-    "palette": "sage"
+    "palette": "sage",
+    "titleEn": "Mother's Wrath",
+    "titleEs": "La ira de una madre",
+    "mediumEn": "Oil paint (finger-painted)",
+    "mediumEs": "Pintura al óleo (pintada con los dedos)"
   },
   {
     "id": "verk-15",
@@ -156,7 +212,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2024",
     "description": null,
-    "palette": "sand"
+    "palette": "sand",
+    "titleEn": "Empyrean",
+    "titleEs": "Empíreo",
+    "mediumEn": "Acrylic",
+    "mediumEs": "Acrílico"
   },
   {
     "id": "verk-16",
@@ -166,7 +226,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2022",
     "description": null,
-    "palette": "rose"
+    "palette": "rose",
+    "titleEn": "Lyra in Great-Grandmother's Garden",
+    "titleEs": "Lyra en el jardín de la bisabuela",
+    "mediumEn": "Acrylic (miniature)",
+    "mediumEs": "Acrílico (miniatura)"
   },
   {
     "id": "verk-17",
@@ -176,7 +240,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2023",
     "description": null,
-    "palette": "blue"
+    "palette": "blue",
+    "titleEn": "Feelings",
+    "titleEs": "Emociones",
+    "mediumEn": "Acrylic (miniature)",
+    "mediumEs": "Acrílico (miniatura)"
   },
   {
     "id": "verk-18",
@@ -186,7 +254,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2025",
     "description": null,
-    "palette": "linen"
+    "palette": "linen",
+    "titleEn": "Sledding Trip",
+    "titleEs": "Paseo en trineo",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-19",
@@ -200,7 +272,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2025",
     "description": null,
-    "palette": "clay"
+    "palette": "clay",
+    "titleEn": "A Clearing in the Dark",
+    "titleEs": "Un claro en la oscuridad",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-20",
@@ -214,7 +290,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2026",
     "description": null,
-    "palette": "sage"
+    "palette": "sage",
+    "titleEn": "Good Night",
+    "titleEs": "Buenas noches",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-21",
@@ -224,7 +304,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "sand"
+    "palette": "sand",
+    "titleEn": "Together",
+    "titleEs": "Juntos",
+    "mediumEn": "Ink",
+    "mediumEs": "Tinta"
   },
   {
     "id": "verk-22",
@@ -234,7 +318,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2025",
     "description": null,
-    "palette": "rose"
+    "palette": "rose",
+    "titleEn": "Bebin and Gammern",
+    "titleEs": "Bebin y Gammern",
+    "mediumEn": "Acrylic",
+    "mediumEs": "Acrílico"
   },
   {
     "id": "verk-23",
@@ -244,7 +332,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2026",
     "description": null,
-    "palette": "blue"
+    "palette": "blue",
+    "titleEn": "Our Girls",
+    "titleEs": "Nuestras chicas",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-24",
@@ -254,7 +346,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2023",
     "description": null,
-    "palette": "linen"
+    "palette": "linen",
+    "titleEn": "Pan the Christmas Puppy",
+    "titleEs": "Pan, el cachorro navideño",
+    "mediumEn": "Acrylic (miniature)",
+    "mediumEs": "Acrílico (miniatura)"
   },
   {
     "id": "verk-25",
@@ -264,7 +360,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2021",
     "description": null,
-    "palette": "clay"
+    "palette": "clay",
+    "titleEn": "King Herod",
+    "titleEs": "El rey Herodes",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-26",
@@ -274,7 +374,11 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2021",
     "description": null,
-    "palette": "sage"
+    "palette": "sage",
+    "titleEn": "Mona Lisa Copy",
+    "titleEs": "Copia de la Mona Lisa",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   },
   {
     "id": "verk-27",
@@ -284,6 +388,10 @@ window.ARTWORKS = [
     "dimensions": null,
     "year": "2021",
     "description": null,
-    "palette": "sand"
+    "palette": "sand",
+    "titleEn": "Dancing Couple",
+    "titleEs": "Pareja bailando",
+    "mediumEn": "Oil paint",
+    "mediumEs": "Pintura al óleo"
   }
 ];
