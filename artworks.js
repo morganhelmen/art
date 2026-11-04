@@ -218,9 +218,9 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-21",
-    "title": "Verk 21",
-    "image": null,
-    "medium": null,
+    "title": "Hører Sammen",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Hører-Sammen_verk21_Blekk.jpg",
+    "medium": "Blekk",
     "dimensions": null,
     "year": null,
     "description": null,
