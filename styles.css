@@ -369,3 +369,9 @@ body{font-size:16px}
 /* Raise the purple dot to the cap-height, level with the top of the H */
 .signature .signature-dot{position:relative;top:-.47em;margin-bottom:0}
 @media(max-width:760px){.signature .signature-dot{top:-.47em;margin-bottom:0}}
+
+/* Navigation for multiple photographs belonging to one artwork. */
+.dialog-art{position:relative}
+.artwork-image-controls{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;align-items:center;gap:18px;padding:7px 12px;background:#f4f1ebed;border:1px solid #d8d0d9;border-radius:30px;color:#302b30;font-size:11px}
+.artwork-image-controls button{width:30px;height:30px;display:grid;place-items:center;font-size:17px;border-radius:50%;background:transparent}
+.artwork-image-controls button:hover{background:#e9dff0}
