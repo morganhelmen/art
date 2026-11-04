@@ -426,3 +426,19 @@ body{font-size:16px}
 @media(max-width:600px){.guestbook-section{padding:58px 0 64px}.guestbook-content{grid-template-columns:1fr;gap:14px}.guestbook-note{padding:14px 0}.guestbook-note .guestbook-empty{margin-top:14px}.guestbook-submit{max-width:none}}
 
 .guestbook-note .guestbook-author{font:12px/1.5 Arial,sans-serif;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:#806b8e;margin-top:8px}
+
+
+/* Keep artwork browsing controls visible without scrolling inside the viewer. */
+.art-dialog{overflow:auto;overscroll-behavior:contain}
+.dialog-bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:14px;background:#f8f1ff;border-bottom:1px solid #dfc9f2}
+.dialog-bar .dialog-navigation{display:flex;align-items:center;gap:8px;margin:0;padding:0;border:0}
+.dialog-bar .dialog-navigation button{min-width:42px;min-height:38px;justify-content:center;gap:6px;padding:6px 10px;border:1px solid #d9c0eb;border-radius:24px;background:#fffaff;color:#40264f}
+.dialog-bar .dialog-navigation button:hover{background:#ead8f7}
+.dialog-bar .dialog-navigation button span{font-size:12px}
+.dialog-details .dialog-navigation{display:none}
+@media(max-width:760px){
+  .dialog-bar{gap:8px;padding:8px 10px}
+  .dialog-bar .dialog-navigation{gap:5px}
+  .dialog-bar .dialog-navigation button{min-width:36px;min-height:36px;padding:5px 8px}
+  .dialog-bar .dialog-navigation button span{display:none}
+}
