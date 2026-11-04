@@ -202,9 +202,11 @@
       ['.view-options [data-view="large"] span', 'Larger'],
       ['.gallery-footnote', 'All items are placeholders. Titles, images and artwork details will be added over time.'],
       ['.about-copy .eyebrow', 'ABOUT THE ARTIST'],
-      ['.about-copy .about-lead', 'A place for my paintings.'],
-      ['.about-copy p:not(.eyebrow):not(.about-lead)', 'A digital gallery where every artwork has a place of its own. A personal introduction to me and my work will be added here.'],
-      ['.about-copy .quiet-label', 'Artist introduction coming soon'],
+      ['.about-copy .about-lead', "I'm Lisa, I'm 36, and I live in Frognes, Hokksund, with my fiancé, our children and our dog, Pan."],
+      ['.about-copy .about-story-1', "I've loved art for as long as I can remember. My interest in painting, drawing and creating with many different materials has followed me through every stage of life. I enjoy exploring different forms of expression and techniques, and I'm always curious about what I can learn and create."],
+      ['.about-copy .about-story-2', "Much of what I know about painting, I learned from my grandmother, whose portrait you can also see in the gallery. She was never afraid to speak her mind, which made her my best, and perhaps most honest, critic. She has meant a great deal to my development as an artist."],
+      ['.about-copy .about-story-3', "I've painted several commissioned works and have also had the opportunity to exhibit and sell paintings, including at Ormåsen and Kunst Rundt Elva 2026."],
+      ['.about-copy .about-story-4', "One of my biggest dreams is to have my own studio and gallery one day. A place where I can create, explore new techniques and share the joy of making art with others through workshops and courses in different art forms."],
       ['.contact-inner .eyebrow', 'CONTACT'],
       ['#contact-title', 'A painting<br>that <em>speaks to you?</em>'],
       ['.contact-copy p', 'Have a question about the paintings, or want to talk about a particular piece? Send me a message using the form and I’ll get back to you.'],
@@ -233,6 +235,23 @@
     document.querySelector('.mobile-menu nav')?.setAttribute('aria-label', 'Mobile navigation');
     document.title = 'Lisa Wilberg Helmen · Paintings';
     document.querySelector('meta[name="description"]')?.setAttribute('content', 'Paintings by Lisa Wilberg Helmen. A digital gallery in the making.');
+  }
+
+
+  if (isSpanish) {
+    const spanishAbout = [
+      ['.about-copy .eyebrow', 'SOBRE LA ARTISTA'],
+      ['.about-copy .about-lead', 'Me llamo Lisa, tengo 36 años y vivo en Frognes, Hokksund, con mi prometido, nuestros hijos y nuestro perro, Pan.'],
+      ['.about-copy .about-story-1', 'Me ha gustado el arte desde que tengo memoria. Mi interés por la pintura, el dibujo y la creación con materiales muy diversos me ha acompañado en todas las etapas de mi vida. Me gusta explorar distintas formas de expresión y técnicas, y siempre tengo curiosidad por aprender y crear cosas nuevas.'],
+      ['.about-copy .about-story-2', 'Gran parte de lo que sé sobre pintura lo aprendí de mi abuela, cuyo retrato también puedes ver en la galería. Nunca tuvo miedo de decir lo que pensaba, por eso siempre fue mi mejor crítica y, quizá, la más sincera. Ha sido muy importante para mi desarrollo como artista.'],
+      ['.about-copy .about-story-3', 'He realizado varias obras por encargo y también he tenido la oportunidad de exponer y vender cuadros, entre otros lugares en Ormåsen y durante Kunst Rundt Elva 2026.'],
+      ['.about-copy .about-story-4', 'Uno de mis grandes sueños es tener algún día mi propio taller y galería. Un lugar donde pueda crear, explorar nuevas técnicas y compartir con otras personas la alegría de crear mediante talleres y cursos de distintas disciplinas artísticas.']
+    ];
+    for (const [selector, value] of spanishAbout) {
+      const element = document.querySelector(selector);
+      if (element) element.textContent = value;
+    }
+    document.querySelector('.about-section')?.setAttribute('aria-label', 'Sobre Lisa');
   }
 
 
