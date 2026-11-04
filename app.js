@@ -1,5 +1,6 @@
 (() => {
   const works = window.ARTWORKS || [];
+  if (window.location.pathname.startsWith("/es/")) { document.querySelector(".artist-link")?.replaceChildren("Sobre la artista ", Object.assign(document.createElement("span"), { "aria-hidden": "true", textContent: "↓" })); }
   const grid = document.getElementById("artworks");
   const dialog = document.getElementById("artDialog");
   const palettes = new Set(["clay","sage","sand","rose","blue","linen"]);
@@ -186,7 +187,8 @@
       ['#hero-title', 'A space<br>for <em>paintings.</em>'],
       ['.hero-intro', 'By Lisa Wilberg Helmen.'],
       ['.hero-description', 'Welcome. A place where each painting can be seen, one at a time.'],
-      ['.underlined-link', 'Explore the gallery <span aria-hidden="true">↓</span>'],
+      ['.underlined-link:not(.artist-link)', 'Explore the gallery <span aria-hidden="true">↓</span>'],
+      ['.artist-link', 'About the artist <span aria-hidden="true">↓</span>'],
       ['.hero-note p', 'The gallery is taking shape.<br>Artwork will be added soon. For now, these are placeholders.'],
       ['.hero-display', null],
       ['.display-caption span:first-child', 'A FIRST LOOK'],
