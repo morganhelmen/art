@@ -336,6 +336,7 @@ window.ARTWORKS = [
   {
     "id": "verk-23",
     "title": "Jentene Våre",
+    "sold": true,
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Jentene-Våre_verk23_Oljemaling_2026.jpg",
     "medium": "Oljemaling",
     "dimensions": null,
@@ -350,6 +351,7 @@ window.ARTWORKS = [
   {
     "id": "verk-24",
     "title": "Julevalpen Pan",
+    "sold": true,
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Julevalpen_Pan_verk24_Akryl(Miniatyr)_2023.jpg",
     "medium": "Akryl (miniatyr)",
     "dimensions": null,
@@ -364,6 +366,7 @@ window.ARTWORKS = [
   {
     "id": "verk-25",
     "title": "Kong Herodes",
+    "sold": true,
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Kong-Herodes_Verk25_Oljemaling_2021.jpg",
     "images": [
       "https://raw.githubusercontent.com/morganhelmen/art/main/Kong-Herodes_Verk25_Oljemaling_2021.jpg",
@@ -396,6 +399,7 @@ window.ARTWORKS = [
   {
     "id": "verk-27",
     "title": "Dansende Par",
+    "sold": true,
     "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Dansende-Par_verk27_Oljemaling_2021.jpg",
     "medium": "Oljemaling",
     "dimensions": null,
