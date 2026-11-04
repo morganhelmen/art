@@ -1,7 +1,13 @@
 // Ten independent image slots for the homepage preview.
-// Add an image URL in quotation marks to any slot. Leave null for an empty placeholder.
-// Example: window.SNEAK_PEEK[0] = "/my-preview-image.jpg";
 window.SNEAK_PEEK = [
-  "/FB_IMG_1793725456275.jpg", "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_4508417678295351639.jpg", null, null, null,
-  null, null, null, null, null
+  "/FB_IMG_1793725456275.jpg",
+  "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_4508417678295351639.jpg",
+  "/Hører-Sammen_innblikk03.jpg",
+  "/Sommerflørt_innblikk04_blekk-og-akvarell.jpg",
+  "/Lyra-i-Oldemors-Hage_innblikk05_Akryl(Miniatyr).jpg",
+  null,
+  "/Kunst_Rundt_Elva2026_innblikk07.jpg",
+  null,
+  "/Sovende-Lyra_innblikk09_Oljemaling_2020.jpg",
+  "/Innblikk10.jpg"
 ];
