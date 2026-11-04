@@ -424,3 +424,5 @@ body{font-size:16px}
 .guestbook-honeypot{position:absolute!important;left:-5000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 @media(max-width:900px){.guestbook-inner{grid-template-columns:1fr;gap:24px}.guestbook-content{grid-template-columns:.8fr 1.2fr;gap:28px}}
 @media(max-width:600px){.guestbook-section{padding:58px 0 64px}.guestbook-content{grid-template-columns:1fr;gap:14px}.guestbook-note{padding:14px 0}.guestbook-note .guestbook-empty{margin-top:14px}.guestbook-submit{max-width:none}}
+
+.guestbook-note .guestbook-author{font:12px/1.5 Arial,sans-serif;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:#806b8e;margin-top:8px}
