@@ -1,30 +1,34 @@
-// Artwork images hosted in the repository root or the Bilder upload branch. Artwork details are added as provided by the artist.
+// Complete gallery inventory. Repeated images are grouped into a dedicated viewer on the artwork's own page.
 window.ARTWORKS = [
   {
     "id": "verk-01",
     "title": "Gullgruve",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/20260921_215701.jpg",
-    "medium": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Gullgruve_verk01_Akryl_2026(1).jpg",
+    "images": [
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Gullgruve_verk01_Akryl_2026(1).jpg",
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Gullgruve_verk01_Akryl_2026(2).jpg"
+    ],
+    "medium": "Akryl",
     "dimensions": null,
-    "year": null,
-    "description": "Malt med akryl på lerret høsten 2026",
+    "year": "2026",
+    "description": null,
     "palette": "clay"
   },
   {
     "id": "verk-02",
-    "title": "God Natt",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/20261012_203322.jpg",
-    "medium": null,
+    "title": "Sjelevenner",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Sjelevenner_verk02_Oljemaling_2026.jpg",
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
-    "description": "malt med oljemaling på lerret",
+    "year": "2026",
+    "description": null,
     "palette": "sage"
   },
   {
     "id": "verk-03",
     "title": "Morgan",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/20261012_203417.jpg",
-    "medium": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Morgan_verk03_akryl.jpg",
+    "medium": "Akryl",
     "dimensions": null,
     "year": null,
     "description": null,
@@ -32,208 +36,254 @@ window.ARTWORKS = [
   },
   {
     "id": "verk-04",
-    "title": "Sjelevenner",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_1793345411999.jpg",
-    "medium": null,
+    "title": "Glød (Lyser i mørket)",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Glød(Lyser I mørket)_verk04_Akryl_2026.jpg",
+    "medium": "Akryl",
     "dimensions": null,
-    "year": null,
+    "year": "2026",
     "description": null,
     "palette": "rose"
   },
   {
     "id": "verk-05",
-    "title": "Empyrean",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_1793345523787.jpg",
-    "medium": null,
+    "title": "Tullehund",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Tullehund_verk05_akryl_2023.jpg",
+    "medium": "Akryl",
     "dimensions": null,
-    "year": null,
+    "year": "2023",
     "description": null,
     "palette": "blue"
   },
   {
     "id": "verk-06",
     "title": "Pan",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_2322150908383179134.jpg",
-    "medium": null,
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Pan_verk06_oljemaling_2024(1).jpg",
+    "images": [
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Pan_verk06_oljemaling_2024(1).jpg",
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Pan_verk06_oljemaling_2024(2).jpg"
+    ],
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
+    "year": "2024",
     "description": null,
     "palette": "linen"
   },
   {
     "id": "verk-07",
-    "title": "Jentene",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20260429_103420.jpg",
-    "medium": "Olje på lerret",
+    "title": "Lyras Arr",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Lyras-Arr_verk07_Oljemaling_2024.jpg",
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
+    "year": "2024",
     "description": null,
-    "palette": "clay",
-    "sold": true
+    "palette": "clay"
   },
   {
     "id": "verk-08",
-    "title": "Lyset I mørket",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_5318581180406524715.jpg",
-    "medium": "Olje på lerret",
+    "title": "Bestemor",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Bestemor_verk08_Oljemaling_2025.jpg",
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
+    "year": "2025",
     "description": null,
-    "palette": "sage",
-    "sold": false
+    "palette": "sage"
   },
   {
     "id": "verk-09",
-    "title": "Bestemor Wilberg",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_7307338540032469079.jpg",
-    "medium": "Olje på lerret",
+    "title": "Soloppgang",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Soloppgang_verk09_Oljemaling_2021.jpg",
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
+    "year": "2021",
     "description": null,
-    "palette": "sand",
-    "sold": false
+    "palette": "sand"
+  },
+  {
+    "id": "verk-10",
+    "title": "Gammern Casper",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Gammern-Casper_verk10_Akryl_2023.jpg",
+    "medium": "Akryl",
+    "dimensions": null,
+    "year": "2023",
+    "description": null,
+    "palette": "rose"
   },
   {
     "id": "verk-11",
-    "title": "Følelser",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/FB_IMG_858120838675295458.jpg",
-    "medium": "Akryl på miniplate",
+    "title": "Lyra i Alpene",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Lyra-i-Alpene_verk11_Akryl_2025.jpg",
+    "medium": "Akryl",
     "dimensions": null,
-    "year": null,
+    "year": "2025",
     "description": null,
-    "palette": "blue",
-    "sold": false
+    "palette": "blue"
   },
   {
     "id": "verk-12",
-    "title": "Glød sammen",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/Bilder/Messenger_creation_91581513-0422-4D9E-B4B7-A156ED82B2F5.png",
-    "medium": "Akryl og selvlysende maling på lerret",
+    "title": "El Rey Pan",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/El-Rey-Pan_verk12_Oljemaling_2026.jpg",
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
+    "year": "2026",
     "description": null,
-    "palette": "linen",
-    "sold": false
+    "palette": "linen"
   },
   {
     "id": "verk-13",
-    "title": "Mors Vrede",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/FB_IMG_1641832533179.jpg",
-    "medium": "Oljemaling, fingermalt",
+    "title": "Skogsfae",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Skogsfae_verk13_Oljemaling(Fingermalt)_2021.jpg",
+    "medium": "Oljemaling (fingermalt)",
     "dimensions": null,
-    "year": null,
+    "year": "2021",
     "description": null,
-    "palette": "clay",
-    "sold": false
+    "palette": "clay"
   },
   {
     "id": "verk-14",
-    "title": "Aketur",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20261030_200627.jpg",
-    "medium": "Olje på lerret",
+    "title": "Mors Vrede",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Mors-Vrede_verk14_Oljemaling(Fingermalt)_2021.jpg",
+    "medium": "Oljemaling (fingermalt)",
     "dimensions": null,
-    "year": null,
+    "year": "2021",
     "description": null,
-    "palette": "sage",
-    "sold": false
+    "palette": "sage"
   },
   {
     "id": "verk-15",
-    "title": "Bebin & Gammern",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/20261030_200654.jpg",
-    "medium": "Akryl på plate",
+    "title": "Empyrean",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Empyrean_verk15_Akryl_2024.jpg",
+    "medium": "Akryl",
     "dimensions": null,
-    "year": null,
+    "year": "2024",
     "description": null,
-    "palette": "sand",
-    "sold": false
+    "palette": "sand"
   },
   {
     "id": "verk-16",
-    "title": "Kopi av Mona Lisa",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG20210816095728.jpg",
-    "medium": "Olje på lerret med ramme",
+    "title": "Lyra i Oldemors Hage",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Lyra-i-Oldemors-Hage_verk16_Akryl(Miniatyr)_2022.jpg",
+    "medium": "Akryl (miniatyr)",
     "dimensions": null,
-    "year": null,
+    "year": "2022",
     "description": null,
-    "palette": "rose",
-    "sold": true
+    "palette": "rose"
   },
   {
     "id": "verk-17",
-    "title": "Kong Herodes",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG20211123134047.jpg",
-    "medium": "Olje på lerret",
+    "title": "Følelser",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Følelser_verk17_Akryl(Miniatyr)_2023.jpg",
+    "medium": "Akryl (miniatyr)",
     "dimensions": null,
-    "year": null,
+    "year": "2023",
     "description": null,
-    "palette": "blue",
-    "sold": true
+    "palette": "blue"
   },
   {
     "id": "verk-18",
-    "title": "Lyra I soloppgang",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG20211216190547.jpg",
-    "medium": "Olje på lerret",
+    "title": "Aketur",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Aketur_verk18_Oljemaling_2025.jpg",
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
+    "year": "2025",
     "description": null,
-    "palette": "linen",
-    "sold": false
+    "palette": "linen"
   },
   {
     "id": "verk-19",
-    "title": "Dansende Par",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/IMG_20210726_152111.jpg",
-    "medium": null,
+    "title": "Lysning i Mørket",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Lysning-i-Mørket_verk19_Oljemaling_2025(01).jpg",
+    "images": [
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Lysning-i-Mørket_verk19_Oljemaling_2025(01).jpg",
+      "https://raw.githubusercontent.com/morganhelmen/art/main/Lysning-i-Mørket_verk19_Oljemaling_2025(2).jpg"
+    ],
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
+    "year": "2025",
     "description": null,
-    "palette": "clay",
-    "sold": true
+    "palette": "clay"
   },
   {
     "id": "verk-20",
-    "title": "Julevalp",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Screenshot_20260109_202020_Snapchat.jpg",
-    "medium": null,
+    "title": "God Natt",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/God-Natt_verk20_Oljemaling_2026(01).jpg",
+    "images": [
+      "https://raw.githubusercontent.com/morganhelmen/art/main/God-Natt_verk20_Oljemaling_2026(01).jpg",
+      "https://raw.githubusercontent.com/morganhelmen/art/main/God-Natt_verk20_Oljemaling_2026(02).jpg"
+    ],
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
+    "year": "2026",
     "description": null,
-    "palette": "clay",
-    "sold": true
+    "palette": "sage"
   },
   {
     "id": "verk-21",
-    "title": "Hører Sammen",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Snapchat-285819956.jpg",
+    "title": "Verk 21",
+    "image": null,
     "medium": null,
     "dimensions": null,
     "year": null,
     "description": null,
-    "palette": "sage",
-    "sold": true
+    "palette": "sand"
   },
   {
     "id": "verk-22",
-    "title": "Sommerkjærlighet",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Snapchat-755295878.jpg",
-    "medium": null,
+    "title": "Bebin og Gammern",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Bebin-og-Gammern_verk22_Akryl_2025.jpg",
+    "medium": "Akryl",
     "dimensions": null,
-    "year": null,
+    "year": "2025",
     "description": null,
-    "palette": "sand",
-    "sold": false
+    "palette": "rose"
   },
   {
     "id": "verk-23",
-    "title": "Rosedrager",
-    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Snapchat-942619201.jpg",
-    "medium": null,
+    "title": "Jentene Våre",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Jentene-Våre_verk23_Oljemaling_2026.jpg",
+    "medium": "Oljemaling",
     "dimensions": null,
-    "year": null,
+    "year": "2026",
     "description": null,
-    "palette": "rose",
-    "sold": false
+    "palette": "blue"
+  },
+  {
+    "id": "verk-24",
+    "title": "Julevalpen Pan",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Julevalpen_Pan_verk24_Akryl(Miniatyr)_2023.jpg",
+    "medium": "Akryl (miniatyr)",
+    "dimensions": null,
+    "year": "2023",
+    "description": null,
+    "palette": "linen"
+  },
+  {
+    "id": "verk-25",
+    "title": "Kong Herodes",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Kong-Herodes_Verk25_Oljemaling_2021.jpg",
+    "medium": "Oljemaling",
+    "dimensions": null,
+    "year": "2021",
+    "description": null,
+    "palette": "clay"
+  },
+  {
+    "id": "verk-26",
+    "title": "Mona Lisa-kopi",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Mona-Lisa-kopi_verk26_Oljemaling_2021.jpg",
+    "medium": "Oljemaling",
+    "dimensions": null,
+    "year": "2021",
+    "description": null,
+    "palette": "sage"
+  },
+  {
+    "id": "verk-27",
+    "title": "Dansende Par",
+    "image": "https://raw.githubusercontent.com/morganhelmen/art/main/Dansende-Par_verk27_Oljemaling_2021.jpg",
+    "medium": "Oljemaling",
+    "dimensions": null,
+    "year": "2021",
+    "description": null,
+    "palette": "sand"
   }
 ];
