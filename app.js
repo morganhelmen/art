@@ -276,7 +276,6 @@
     let timer;
     let paused = false;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const dots = document.getElementById("peekDots");
     const current = document.getElementById("peekCurrent");
     const viewport = document.createElement("div");
     viewport.className = "peek-viewport";
@@ -320,7 +319,6 @@
         incoming.finished.then(() => outgoing.remove()).catch(() => {});
       } else outgoing.remove();
       current.textContent = String(peekIndex + 1).padStart(2,"0");
-      dots.querySelectorAll("button").forEach((dot,i) => dot.setAttribute("aria-current",String(i === peekIndex)));
       // Warm the next image so automatic transitions do not wait for a download.
       if (peekImages[(peekIndex + 1) % count]) {
         const preload = new Image();
@@ -334,14 +332,6 @@
       }
     };
     const navigate = (index,direction) => { renderPeek(index,direction); schedule(); };
-    for (let i = 0; i < count; i++) {
-      const dot = document.createElement("button");
-      dot.type = "button";
-      dot.setAttribute("aria-label",(isSpanish ? "Imagen " : isEnglish ? "Image " : "Bilde ") + (i + 1));
-      dot.setAttribute("aria-current",String(i === 0));
-      dot.addEventListener("click",() => navigate(i,i < peekIndex ? -1 : 1));
-      dots.append(dot);
-    }
     document.getElementById("peekPrev").addEventListener("click",() => navigate((peekIndex + count - 1) % count,-1));
     document.getElementById("peekNext").addEventListener("click",() => navigate((peekIndex + 1) % count,1));
     current.textContent = "01";
@@ -350,12 +340,16 @@
     toggle.type = "button";
     toggle.className = "peek-autoplay";
     const updateToggle = () => {
-      toggle.textContent = paused
+      const label = paused
         ? (isSpanish ? "Iniciar presentación" : isEnglish ? "Play slideshow" : "Start lysbildefremvisning")
         : (isSpanish ? "Pausar presentación" : isEnglish ? "Pause slideshow" : "Pause lysbildefremvisning");
+      toggle.setAttribute("aria-label",label);
+      toggle.title = label;
+      toggle.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">' +
+        (paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>') + '</svg>';
     };
     toggle.addEventListener("click",() => { paused = !paused; updateToggle(); schedule(); });
-    peekArt.closest(".peek-stage").append(toggle);
+    document.getElementById("peekNext").before(toggle);
     updateToggle();
     document.addEventListener("visibilitychange",schedule);
     if (peekImages[1]) { const preload = new Image(); preload.src = peekImages[1]; }
