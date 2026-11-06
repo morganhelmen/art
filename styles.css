@@ -461,3 +461,9 @@ body{font-size:16px}
 .peek-stage{grid-template-columns:minmax(0,1fr);column-gap:0}
 .peek-controls{grid-column:1;grid-row:2;justify-self:center;width:max-content;padding:0}
 .peek-count{grid-column:1;grid-row:2;justify-self:end}
+
+
+/* Center vector icons without depending on mobile font metrics. */
+.peek-controls>button{display:flex;align-items:center;justify-content:center;line-height:1;padding:0}
+.peek-controls>button svg{display:block;flex:0 0 auto;width:20px;height:20px;margin:0}
+.peek-controls .peek-autoplay svg{width:18px;height:18px}
