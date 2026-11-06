@@ -267,35 +267,99 @@
   }
 
 
-  // Independent eleven-image preview carousel. Add image URLs in slideshow.js.
+  // Preview carousel: manual navigation and a five-second autoplay clock.
   const peekImages = Array.isArray(window.SNEAK_PEEK) ? window.SNEAK_PEEK.slice(0,11) : [];
   const peekArt = document.getElementById("peekArt");
   if (peekArt) {
+    const count = peekImages.length || 11;
     let peekIndex = 0;
+    let timer;
+    let paused = false;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const dots = document.getElementById("peekDots");
     const current = document.getElementById("peekCurrent");
-    const renderPeek = () => {
-      const src = peekImages[peekIndex];
-      peekArt.replaceChildren();
-      if (src) {
+    const viewport = document.createElement("div");
+    viewport.className = "peek-viewport";
+    peekArt.replaceChildren(viewport);
+    const makeSlide = index => {
+      const slide = document.createElement("div");
+      slide.className = "peek-slide";
+      if (peekImages[index]) {
         const img = document.createElement("img");
-        img.src = src;
+        img.src = peekImages[index];
         img.alt = isSpanish ? "Obra seleccionada de Lisa Wilberg Helmen" : isEnglish ? "Selected painting by Lisa Wilberg Helmen" : "Utvalgt maleri av Lisa Wilberg Helmen";
-        img.loading = "lazy"; img.decoding = "async"; peekArt.append(img);
+        img.decoding = "async";
+        slide.append(img);
       } else {
-        const placeholder = document.createElement("div"); placeholder.className = "peek-placeholder";
-        const number = document.createElement("span"); number.textContent = String(peekIndex+1).padStart(2,"0");
+        const placeholder = document.createElement("div");
+        placeholder.className = "peek-placeholder";
+        const number = document.createElement("span");
+        number.textContent = String(index + 1).padStart(2,"0");
         const label = document.createElement("small");
         label.textContent = isSpanish ? "Aquí aparecerá una imagen" : isEnglish ? "An image will go here" : "Et bilde kommer her";
-        placeholder.append(number,label); peekArt.append(placeholder);
+        placeholder.append(number,label);
+        slide.append(placeholder);
       }
-      current.textContent = String(peekIndex+1).padStart(2,"0");
-      dots.querySelectorAll("button").forEach((dot,i)=>dot.setAttribute("aria-current",String(i===peekIndex)));
+      return slide;
     };
-    for(let i=0;i<11;i++){const dot=document.createElement("button");dot.type="button";dot.setAttribute("aria-label",(isSpanish?"Imagen ":isEnglish?"Image ":"Bilde ")+(i+1));dot.addEventListener("click",()=>{peekIndex=i;renderPeek();});dots.append(dot);}
-    document.getElementById("peekPrev").addEventListener("click",()=>{peekIndex=(peekIndex+10)%11;renderPeek();});
-    document.getElementById("peekNext").addEventListener("click",()=>{peekIndex=(peekIndex+1)%11;renderPeek();});
-    renderPeek();
+    let activeSlide = makeSlide(0);
+    viewport.append(activeSlide);
+    const renderPeek = (index, direction = 1) => {
+      if (index === peekIndex) return;
+      viewport.getAnimations({subtree:true}).forEach(animation => animation.cancel());
+      const outgoing = activeSlide;
+      viewport.replaceChildren(outgoing);
+      activeSlide = makeSlide(index);
+      viewport.append(activeSlide);
+      peekIndex = index;
+      if (!reducedMotion.matches && typeof activeSlide.animate === "function") {
+        const options = {duration:500,easing:"ease-in-out"};
+        outgoing.setAttribute("aria-hidden","true");
+        outgoing.animate([{transform:"translateX(0)"},{transform:"translateX(" + (-direction * 100) + "%)"}],options);
+        const incoming = activeSlide.animate([{transform:"translateX(" + (direction * 100) + "%)"},{transform:"translateX(0)"}],options);
+        incoming.finished.then(() => outgoing.remove()).catch(() => {});
+      } else outgoing.remove();
+      current.textContent = String(peekIndex + 1).padStart(2,"0");
+      dots.querySelectorAll("button").forEach((dot,i) => dot.setAttribute("aria-current",String(i === peekIndex)));
+      // Warm the next image so automatic transitions do not wait for a download.
+      if (peekImages[(peekIndex + 1) % count]) {
+        const preload = new Image();
+        preload.src = peekImages[(peekIndex + 1) % count];
+      }
+    };
+    const schedule = () => {
+      clearTimeout(timer);
+      if (!paused && !document.hidden && count > 1) {
+        timer = setTimeout(() => { renderPeek((peekIndex + 1) % count); schedule(); },5000);
+      }
+    };
+    const navigate = (index,direction) => { renderPeek(index,direction); schedule(); };
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label",(isSpanish ? "Imagen " : isEnglish ? "Image " : "Bilde ") + (i + 1));
+      dot.setAttribute("aria-current",String(i === 0));
+      dot.addEventListener("click",() => navigate(i,i < peekIndex ? -1 : 1));
+      dots.append(dot);
+    }
+    document.getElementById("peekPrev").addEventListener("click",() => navigate((peekIndex + count - 1) % count,-1));
+    document.getElementById("peekNext").addEventListener("click",() => navigate((peekIndex + 1) % count,1));
+    current.textContent = "01";
+    current.parentElement.lastElementChild.textContent = String(count).padStart(2,"0");
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "peek-autoplay";
+    const updateToggle = () => {
+      toggle.textContent = paused
+        ? (isSpanish ? "Iniciar presentación" : isEnglish ? "Play slideshow" : "Start lysbildefremvisning")
+        : (isSpanish ? "Pausar presentación" : isEnglish ? "Pause slideshow" : "Pause lysbildefremvisning");
+    };
+    toggle.addEventListener("click",() => { paused = !paused; updateToggle(); schedule(); });
+    peekArt.closest(".peek-stage").append(toggle);
+    updateToggle();
+    document.addEventListener("visibilitychange",schedule);
+    if (peekImages[1]) { const preload = new Image(); preload.src = peekImages[1]; }
+    schedule();
   }
 
   const menu = document.querySelector(".mobile-menu");
