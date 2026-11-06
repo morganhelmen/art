@@ -444,5 +444,5 @@ body{font-size:16px}
 }
 
 
-/* Raise the footer's purple dot while preserving its original wordmark size. */
-.footer-signature .signature-dot{margin-bottom:0;position:relative;top:-.47em}
+/* Raise every Helmen signature dot without changing the text size. */
+.signature-dot{margin-bottom:0;position:relative;top:-.47em}
