@@ -175,9 +175,9 @@
   if (isEnglish && !window.location.pathname.startsWith("/en/")) {
     const translations = [
       ['.skip-link', 'Skip to gallery'],
-      ['.desktop-nav a[href="#galleri"]', 'Gallery <span>27</span>'],
+      ['.desktop-nav a[href="#galleri"]', 'Gallery'],
       ['.desktop-nav a[href="#om"]', 'About Lisa'],
-      ['.desktop-nav a[href="#kontakt"]', 'Contact <span aria-hidden="true">↗</span>'],
+      ['.desktop-nav a[href="#kontakt"]', 'Contact'],
       ['.mobile-menu summary', 'Menu <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h16M4 16h16"/></svg>'],
       ['.mobile-menu nav a[href="#galleri"]', 'Gallery'],
       ['.mobile-menu nav a[href="#om"]', 'About Lisa'],
