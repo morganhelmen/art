@@ -474,7 +474,8 @@ body{font-size:16px}
 
 /* Give the guestbook form room beside the greetings and soften its fields. */
 .guestbook-content{column-gap:clamp(56px,6vw,88px)}
-.guestbook-form input,.guestbook-form textarea{
+.guestbook-form input,.guestbook-form textarea,
+.contact-form input,.contact-form textarea{
   border-radius:12px;
   padding:13px 15px;
   font-family:var(--serif);
