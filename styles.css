@@ -470,3 +470,16 @@ body{font-size:16px}
 .peek-controls>button{display:flex;align-items:center;justify-content:center;line-height:1;padding:0}
 .peek-controls>button svg{display:block;flex:0 0 auto;width:20px;height:20px;margin:0}
 .peek-controls .peek-autoplay svg{width:18px;height:18px}
+
+
+/* Give the guestbook form room beside the greetings and soften its fields. */
+.guestbook-content{column-gap:clamp(56px,6vw,88px)}
+.guestbook-form input,.guestbook-form textarea{
+  border-radius:12px;
+  padding:13px 15px;
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:16px;
+  line-height:1.5;
+}
+@media(max-width:900px){.guestbook-content{row-gap:36px}}
