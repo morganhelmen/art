@@ -404,7 +404,10 @@ body{font-size:16px}
 .guestbook-heading h2{font:normal clamp(38px,4.4vw,58px)/1.05 var(--serif);letter-spacing:-.045em;margin:0 0 20px}
 .guestbook-heading h2 em{color:var(--accent)}
 .guestbook-heading>p:last-child{max-width:720px;color:#634878;font-size:16px;line-height:1.8}
-.guestbook-content{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}\n.guestbook-content>.guestbook-note{grid-column:2;min-width:0}\n.guestbook-content>.guestbook-form{grid-column:1;grid-row:1 / span 2;min-width:0}
+.guestbook-content{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.guestbook-content>.guestbook-notes,.guestbook-content>.guestbook-note{grid-column:2;min-width:0}
+.guestbook-notes{display:grid;gap:0}
+.guestbook-content>.guestbook-form{grid-column:1;grid-row:1 / span 2;min-width:0}
 .guestbook-note{padding:20px 0;border-top:1px solid #d5c0e4;color:#634878}
 .guestbook-note-mark{display:block;font:normal 52px/.8 var(--serif);color:#a77ac7}
 .guestbook-note p{font:italic 19px/1.5 var(--serif);margin:14px 0}
