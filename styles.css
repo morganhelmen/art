@@ -490,3 +490,19 @@ body{font-size:16px}
 .guestbook-privacy{font-size:14px;line-height:1.65}
 .guestbook-form>label span{font-size:13px}
 .guestbook-note .guestbook-author{font-size:13px}
+
+
+/* Match the guestbook form's proportions and breathing room to Contact. */
+.guestbook-form{width:100%;max-width:440px;gap:20px}
+.guestbook-inner{gap:44px}
+.guestbook-heading>p:last-child{max-width:560px}
+.guestbook-content{column-gap:90px;row-gap:44px}
+.guestbook-form>label{gap:8px}
+.guestbook-heading h2{font-size:clamp(34px,3.5vw,44px);line-height:1.12}
+@media(max-width:900px){
+  .guestbook-inner{gap:32px}
+  .guestbook-content{row-gap:44px}
+}
+@media(max-width:760px){
+  .guestbook-form{max-width:none}
+}
