@@ -409,7 +409,7 @@ body{font-size:16px}
 .guestbook-notes{display:grid;gap:0}
 .guestbook-content>.guestbook-form{grid-column:1;grid-row:1 / span 2;min-width:0}
 .guestbook-note{padding:20px 0;color:#634878}
-.guestbook-note-mark{display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:#8b35c8;vertical-align:middle}
+.guestbook-note-mark{display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:#8b35c8;vertical-align:middle;position:relative;top:-2px}
 .guestbook-note p{font:italic 19px/1.5 var(--serif);margin:14px 0}
 .guestbook-note .guestbook-empty{font:13px/1.7 var(--serif);color:#806b8e;margin-top:28px}
 .guestbook-form{display:grid;gap:15px}
