@@ -512,7 +512,7 @@ body{font-size:16px}
 .language-picker summary .language-dot{display:block;width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:#8b35c8;transform:none}
 .language-picker[open] summary .language-dot{transform:none}
 @media(min-width:761px){
-  .language-picker summary{font-size:16px;min-width:68px;padding:9px 13px;gap:9px}
+  .language-picker summary{font-size:17px;min-width:68px;padding:9px 13px;gap:9px}
   .language-picker nav{min-width:150px}
   .language-picker nav a{font-size:17px;padding:10px 13px;line-height:1.4}
 }
