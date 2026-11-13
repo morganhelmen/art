@@ -548,3 +548,7 @@ body{font-size:16px}
   .hero-actions{gap:5px}
   .hero-actions .underlined-link{font-size:9px;padding:6px 5px;gap:3px}
 }
+
+
+/* Match the PayPal and Revolut button corner radius. */
+.contact-submit,.guestbook-submit{border-radius:12px}
