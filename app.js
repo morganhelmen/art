@@ -1,14 +1,23 @@
 (() => {
   const works = window.ARTWORKS || [];
   if (window.location.pathname.startsWith("/es/")) { document.querySelector(".artist-link")?.replaceChildren("Sobre la artista ", Object.assign(document.createElement("span"), { "aria-hidden": "true", textContent: "↓" })); }
+  if (window.location.pathname.startsWith("/id/")) { document.querySelector(".artist-link")?.replaceChildren("Tentang seniman ", Object.assign(document.createElement("span"), { "aria-hidden": "true", textContent: "↓" })); }
   const grid = document.getElementById("artworks");
   const dialog = document.getElementById("artDialog");
   const palettes = new Set(["clay","sage","sand","rose","blue","linen"]);
   const params = new URLSearchParams(window.location.search);
   const isEnglish = params.get("lang") === "en" || window.location.pathname.startsWith("/en/");
   const isSpanish = window.location.pathname.startsWith("/es/");
-  document.documentElement.lang = isSpanish ? "es" : (isEnglish ? "en" : "nb");
-  const copy = isSpanish ? {
+  const isIndonesian = window.location.pathname.startsWith("/id/");
+  document.documentElement.lang = isIndonesian ? "id" : isSpanish ? "es" : (isEnglish ? "en" : "nb");
+  const copy = isIndonesian ? {
+    coming: "Gambar segera hadir", sold: "TERJUAL", placeholder: "Karya ", artwork: "Karya",
+    artworkLabel: "Lihat ", placeholderSuffix: " – segera hadir", painting: "Lukisan",
+    placeholderStatus: "Segera hadir", artist: "Dilukis oleh Lisa Wilberg Helmen.",
+    placeholderDescription: "Lukisan karya Lisa Wilberg Helmen akan ditampilkan di sini. Judul, media, dan ukuran akan ditambahkan bersama gambar.",
+    medium: "Media", dimensions: "Ukuran", year: "Tahun", placeholderMeta: "SEGERA HADIR",
+    previous: "Sebelumnya", next: "Berikutnya"
+  } : isSpanish ? {
     coming: "Imagen próximamente", sold: "VENDIDA", placeholder: "Obra ", artwork: "Obra",
     artworkLabel: "Ver ", placeholderSuffix: " – próximamente", painting: "Pintura",
     placeholderStatus: "Próximamente", artist: "Pintado por Lisa Wilberg Helmen.",
@@ -30,8 +39,10 @@
     medium: "Teknikk", dimensions: "Mål", year: "År", placeholderMeta: "PLASSHOLDER",
     previous: "Forrige", next: "Neste"
   };
-  const titleFor = work => isSpanish ? (work.titleEs || work.title) : isEnglish ? (work.titleEn || work.title) : work.title;
-  const mediumFor = work => isSpanish ? (work.mediumEs || work.medium) : isEnglish ? (work.mediumEn || work.medium) : work.medium;
+  const idTitles = {"Gullgruve":"Tambang Emas","Sjelevenner":"Belahan Jiwa","Glød (Lyser i mørket)":"Cahaya (Bersinar dalam Gelap)","Tullehund":"Anjing Lucu","Lyras Arr":"Bekas Luka Lyra","Bestemor":"Nenek","Soloppgang":"Matahari Terbit","Gammern Casper":"Casper si Tua","Lyra i Alpene":"Lyra di Pegunungan Alpen","El Rey Pan":"Raja Pan","Skogsfae":"Peri Hutan","Mors Vrede":"Amarah Ibu","Lyra i Oldemors Hage":"Lyra di Taman Buyut","Følelser":"Perasaan","Aketur":"Perjalanan Kereta Luncur","Lysning i Mørket":"Terang dalam Kegelapan","God Natt":"Selamat Malam","Hører Sammen":"Saling Melengkapi","Bebin og Gammern":"Bebin dan Gammern","Jentene Våre":"Putri-Putri Kami","Julevalpen Pan":"Anak Anjing Natal Pan","Kong Herodes":"Raja Herodes","Mona Lisa-kopi":"Salinan Mona Lisa","Dansende Par":"Pasangan Menari","Sommerflørt":"Godaan Musim Panas"};
+  const idMedia = {"Akryl":"Akrilik","Oljemaling":"Cat minyak","Oljemaling (fingermalt)":"Cat minyak (dilukis dengan jari)","Akryl (miniatyr)":"Akrilik (miniatur)","Blekk":"Tinta","Blekk og akvarell":"Tinta dan cat air"};
+  const titleFor = work => isIndonesian ? (idTitles[work.title] || work.title) : isSpanish ? (work.titleEs || work.title) : isEnglish ? (work.titleEn || work.title) : work.title;
+  const mediumFor = work => isIndonesian ? (idMedia[work.medium] || work.medium) : isSpanish ? (work.mediumEs || work.medium) : isEnglish ? (work.mediumEn || work.medium) : work.medium;
   let selected = 0;
   let imageIndex = 0;
   let opener = null;
@@ -40,7 +51,7 @@
     if (work.image) {
       const img = document.createElement("img");
       img.src = work.image;
-      img.alt = isSpanish
+      img.alt = isIndonesian ? titleFor(work) + " – lukisan karya Lisa Wilberg Helmen" : isSpanish
         ? titleFor(work) + " – pintura de Lisa Wilberg Helmen"
         : isEnglish
           ? titleFor(work) + " – painting by Lisa Wilberg Helmen"
@@ -73,16 +84,16 @@
     if (!sources.length) { dialogArt.append(artworkVisual(work, index)); return; }
     const img = document.createElement("img");
     img.src = sources[imageIndex % sources.length];
-    img.alt = titleFor(work) + " – " + (isEnglish ? "painting by Lisa Wilberg Helmen" : isSpanish ? "pintura de Lisa Wilberg Helmen" : "maleri av Lisa Wilberg Helmen");
+    img.alt = titleFor(work) + " – " + (isIndonesian ? "lukisan karya Lisa Wilberg Helmen" : isEnglish ? "painting by Lisa Wilberg Helmen" : isSpanish ? "pintura de Lisa Wilberg Helmen" : "maleri av Lisa Wilberg Helmen");
     img.loading = "eager"; img.decoding = "async";
     dialogArt.append(img);
     if (sources.length > 1) {
       const controls = document.createElement("div"); controls.className = "artwork-image-controls";
       const previous = document.createElement("button"); previous.type = "button"; previous.textContent = "←";
-      previous.setAttribute("aria-label", isEnglish ? "Previous image" : isSpanish ? "Imagen anterior" : "Forrige bilde");
+      previous.setAttribute("aria-label", isIndonesian ? "Gambar sebelumnya" : isEnglish ? "Previous image" : isSpanish ? "Imagen anterior" : "Forrige bilde");
       const count = document.createElement("span");
       const next = document.createElement("button"); next.type = "button"; next.textContent = "→";
-      next.setAttribute("aria-label", isEnglish ? "Next image" : isSpanish ? "Imagen siguiente" : "Neste bilde");
+      next.setAttribute("aria-label", isIndonesian ? "Gambar berikutnya" : isEnglish ? "Next image" : isSpanish ? "Imagen siguiente" : "Neste bilde");
       const refresh = () => { img.src = sources[imageIndex]; count.textContent = String(imageIndex+1).padStart(2,"0") + " / " + String(sources.length).padStart(2,"0"); };
       previous.addEventListener("click", () => { imageIndex = (imageIndex + sources.length - 1) % sources.length; refresh(); });
       next.addEventListener("click", () => { imageIndex = (imageIndex + 1) % sources.length; refresh(); });
@@ -94,7 +105,7 @@
     imageIndex = 0;
     const work = works[selected];
     document.getElementById("dialogIndex").textContent = number(selected) + " / " + works.length;
-    document.getElementById("dialogTitle").textContent = work.title.startsWith("Verk ") && isEnglish ? copy.placeholder + number(selected) : titleFor(work);
+    document.getElementById("dialogTitle").textContent = work.title.startsWith("Verk ") && (isEnglish || isIndonesian) ? copy.placeholder + number(selected) : titleFor(work);
     document.getElementById("dialogStatus").textContent = work.sold ? copy.sold : (work.image ? copy.painting : copy.placeholderStatus);
     document.getElementById("dialogDescription").textContent = work.description || (work.image ? copy.artist : copy.placeholderDescription);
     renderDialogArtwork(work, selected);
@@ -139,7 +150,7 @@
     arrow.setAttribute("aria-hidden", "true");
     caption.append(title,arrow);
     meta.className = "art-meta";
-    meta.textContent = work.image ? [mediumFor(work),work.dimensions].filter(Boolean).join(" · ") : (isEnglish ? "PLACEHOLDER" : isSpanish ? "PRÓXIMAMENTE" : "PLASSHOLDER");
+    meta.textContent = work.image ? [mediumFor(work),work.dimensions].filter(Boolean).join(" · ") : (isIndonesian ? "SEGERA HADIR" : isEnglish ? "PLACEHOLDER" : isSpanish ? "PRÓXIMAMENTE" : "PLASSHOLDER");
     button.append(image,caption,meta);
     button.addEventListener("click", () => {
       opener = button;
@@ -241,6 +252,60 @@
   }
 
 
+  if (isIndonesian) {
+    const translations = [
+      ['.skip-link','Lewati ke galeri'],
+      ['.desktop-nav a[href="#gallery"]','Galeri'],
+      ['.desktop-nav a[href="#about"]','Tentang Lisa'],
+      ['.desktop-nav a[href="#contact"]','Kontak'],
+      ['.desktop-nav a[href="#guestbook"]','Buku Tamu'],
+      ['.mobile-menu nav a[href="#gallery"]','Galeri'],
+      ['.mobile-menu nav a[href="#about"]','Tentang Lisa'],
+      ['.mobile-menu nav a[href="#contact"]','Kontak'],
+      ['.mobile-menu nav a[href="#guestbook"]','Buku Tamu'],
+      ['.mobile-menu summary','Menu <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h16M4 16h16"/></svg>'],
+      ['.hero-copy .eyebrow','<span class="little-line"></span> GALERI DIGITAL'],
+      ['#peek-title','Sedikit <em>intipan.</em>'],
+      ['.peek-heading .eyebrow','MOMEN PILIHAN'],
+      ['.peek-heading > p:last-child','Beberapa momen yang ingin saya bagikan.'],
+      ['.gallery-heading .eyebrow','GALERI'],
+      ['.gallery-toolbar p','<span class="small-dot"></span> <span id="workCount">'+works.length+'</span> karya di galeri'],
+      ['.view-options [data-view="grid"] span','Tampilan kisi'],
+      ['.view-options [data-view="large"] span','Lebih besar'],
+      ['.gallery-footnote','Judul, gambar, dan detail karya akan ditambahkan secara bertahap.'],
+      ['.about-copy .eyebrow','TENTANG SENIMAN'],
+      ['.about-copy .about-lead','Nama saya Lisa, berusia 36 tahun, dan tinggal di Frognes, Hokksund, bersama tunangan, anak-anak, dan anjing kami, Pan.'],
+      ['.about-copy .about-story-1','Saya telah mencintai seni sejak yang dapat saya ingat. Ketertarikan saya pada melukis, menggambar, dan berkarya dengan berbagai bahan telah menemani setiap tahap kehidupan saya. Saya senang mengeksplorasi beragam ekspresi dan teknik, serta selalu ingin tahu hal baru yang dapat saya pelajari dan ciptakan.'],
+      ['.about-copy .about-story-2','Banyak hal yang saya ketahui tentang melukis saya pelajari dari nenek saya, yang potretnya juga dapat Anda lihat di galeri. Beliau tidak pernah takut menyampaikan pendapat, sehingga menjadi kritikus terbaik dan mungkin paling jujur bagi saya. Beliau sangat berarti dalam perkembangan saya sebagai seniman.'],
+      ['.about-copy .about-story-3','Saya telah membuat beberapa lukisan berdasarkan pesanan dan mendapat kesempatan untuk memamerkan serta menjual karya, antara lain di Ormåsen dan dalam acara Kunst Rundt Elva 2026.'],
+      ['.about-copy .about-story-4','Salah satu impian terbesar saya adalah memiliki studio dan galeri sendiri suatu hari nanti. Sebuah tempat untuk berkarya, menjelajahi teknik baru, serta berbagi kegembiraan menciptakan seni dengan orang lain melalui lokakarya dan kursus berbagai bentuk seni.'],
+      ['.contact-inner .eyebrow','KONTAK'],
+      ['.contact-copy p','Apakah Anda memiliki pertanyaan tentang lukisan atau ingin membicarakan karya tertentu? Kirimkan pesan melalui formulir ini dan saya akan menghubungi Anda kembali.'],
+      ['.guestbook-heading .eyebrow','BUKU TAMU'],
+      ['.guestbook-heading > p:last-child','Punya pendapat tentang karya seni, saran, atau beberapa kata yang ingin dibagikan? Saya senang mendengarnya. Pesan yang disetujui akan ditampilkan di buku tamu ini.'],
+      ['.guestbook-note:nth-child(1) .guestbook-entry > p:first-child','Aku sangat bangga padamu dan semua lukisan indahmu! Tidak sabar ingin melihat lebih banyak karyamu ❤️'],
+      ['.guestbook-note:nth-child(2) .guestbook-entry > p:first-child','Aku suka ini! 🔥'],
+      ['.guestbook-note:nth-child(3) .guestbook-entry > p:first-child','Aku sangat bangga padamu, kamu sangat berbakat. Lukisanmu indah. Sayang kamu 🥰♥️'],
+      ['.guestbook-note:nth-child(4) .guestbook-entry > p:first-child','Semoga sukses<br>Semoga semua harapanmu terwujud ❤️'],
+      ['.donation-box .eyebrow','DUKUNG SENI'],
+      ['#donation-title','Dukung karya seni saya'],
+      ['.donation-box > p:not(.eyebrow):not(.donation-thanks)','Menyukai karya seni saya? Donasi kecil membantu saya membeli bahan, mengeksplorasi ide baru, dan terus berkarya. Setiap kontribusi sangat berarti. 💜 Ingin menerima hadiah kecil atau cetakan karya sebagai ucapan terima kasih? Kirimkan informasi kontak Anda dan kita bisa mengaturnya. ❤️'],
+      ['.donation-thanks','Terima kasih atas dukungan Anda!'],
+      ['.site-footer p','Lukisan · Galeri sedang dikembangkan'],
+      ['.back-top','Kembali ke atas ↑'],
+      ['.keyboard-help','Gunakan tombol panah untuk menjelajah']
+    ];
+    for (const [selector,value] of translations) { const element=document.querySelector(selector); if(element) element.innerHTML=value; }
+    document.querySelector('.mobile-menu')?.setAttribute('aria-label','Menu seluler');
+    document.querySelector('.mobile-menu nav')?.setAttribute('aria-label','Navigasi seluler');
+    document.querySelector('.gallery-toolbar .view-options')?.setAttribute('aria-label','Ukuran gambar galeri');
+    document.querySelector('.guestbook-form input[name="name"]')?.setAttribute('aria-label','Nama atau nama panggilan');
+    document.querySelector('.close-dialog')?.setAttribute('aria-label','Tutup karya seni');
+    document.getElementById('previousWork')?.setAttribute('aria-label','Karya sebelumnya');
+    document.getElementById('nextWork')?.setAttribute('aria-label','Karya berikutnya');
+    document.title='Galeri Helmen | Lukisan asli karya Lisa Wilberg Helmen';
+  }
+
   if (isSpanish) {
 
     const spanishAbout = [
@@ -286,7 +351,7 @@
       if (peekImages[index]) {
         const img = document.createElement("img");
         img.src = peekImages[index];
-        img.alt = isSpanish ? "Obra seleccionada de Lisa Wilberg Helmen" : isEnglish ? "Selected painting by Lisa Wilberg Helmen" : "Utvalgt maleri av Lisa Wilberg Helmen";
+        img.alt = isIndonesian ? "Lukisan pilihan karya Lisa Wilberg Helmen" : isSpanish ? "Obra seleccionada de Lisa Wilberg Helmen" : isEnglish ? "Selected painting by Lisa Wilberg Helmen" : "Utvalgt maleri av Lisa Wilberg Helmen";
         img.decoding = "async";
         slide.append(img);
       } else {
@@ -295,7 +360,7 @@
         const number = document.createElement("span");
         number.textContent = String(index + 1).padStart(2,"0");
         const label = document.createElement("small");
-        label.textContent = isSpanish ? "Aquí aparecerá una imagen" : isEnglish ? "An image will go here" : "Et bilde kommer her";
+        label.textContent = isIndonesian ? "Gambar akan ditampilkan di sini" : isSpanish ? "Aquí aparecerá una imagen" : isEnglish ? "An image will go here" : "Et bilde kommer her";
         placeholder.append(number,label);
         slide.append(placeholder);
       }
@@ -341,8 +406,8 @@
     toggle.className = "peek-autoplay";
     const updateToggle = () => {
       const label = paused
-        ? (isSpanish ? "Iniciar presentación" : isEnglish ? "Play slideshow" : "Start lysbildefremvisning")
-        : (isSpanish ? "Pausar presentación" : isEnglish ? "Pause slideshow" : "Pause lysbildefremvisning");
+        ? (isIndonesian ? "Mulai tayangan" : isSpanish ? "Iniciar presentación" : isEnglish ? "Play slideshow" : "Start lysbildefremvisning")
+        : (isIndonesian ? "Jeda tayangan" : isSpanish ? "Pausar presentación" : isEnglish ? "Pause slideshow" : "Pause lysbildefremvisning");
       toggle.setAttribute("aria-label",label);
       toggle.title = label;
       toggle.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">' +
