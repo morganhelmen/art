@@ -281,6 +281,7 @@
       ['.about-copy .about-story-4','Salah satu impian terbesar saya adalah memiliki studio dan galeri sendiri suatu hari nanti. Sebuah tempat untuk berkarya, menjelajahi teknik baru, serta berbagi kegembiraan menciptakan seni dengan orang lain melalui lokakarya dan kursus berbagai bentuk seni.'],
       ['.contact-inner .eyebrow','KONTAK'],
       ['.contact-copy p','Apakah Anda memiliki pertanyaan tentang lukisan atau ingin membicarakan karya tertentu? Kirimkan pesan melalui formulir ini dan saya akan menghubungi Anda kembali.'],
+      ['#contact-title','Lukisan yang<br><em>menyentuh hati?</em>'],
       ['.guestbook-heading .eyebrow','BUKU TAMU'],
       ['.guestbook-heading > p:last-child','Punya pendapat tentang karya seni, saran, atau beberapa kata yang ingin dibagikan? Saya senang mendengarnya. Pesan yang disetujui akan ditampilkan di buku tamu ini.'],
       ['.guestbook-note:nth-child(1) .guestbook-entry > p:first-child','Aku sangat bangga padamu dan semua lukisan indahmu! Tidak sabar ingin melihat lebih banyak karyamu ❤️'],
@@ -296,7 +297,15 @@
       ['.keyboard-help','Gunakan tombol panah untuk menjelajah']
     ];
     for (const [selector,value] of translations) { const element=document.querySelector(selector); if(element) element.innerHTML=value; }
+    document.querySelector('.desktop-nav')?.setAttribute('aria-label','Navigasi utama');
+    document.querySelector('.language-picker nav')?.setAttribute('aria-label','Pilih bahasa');
     document.querySelector('.mobile-menu')?.setAttribute('aria-label','Menu seluler');
+    const guestHoneypot=document.querySelector('.guestbook-honeypot label');
+    if(guestHoneypot?.firstChild) guestHoneypot.firstChild.textContent='Biarkan kolom ini kosong';
+    const guestEmail=document.querySelector('.guestbook-form > label:nth-of-type(2)');
+    if(guestEmail?.firstChild) guestEmail.firstChild.textContent='Alamat email ';
+    const guestMessage=document.querySelector('.guestbook-form > label:nth-of-type(3)');
+    if(guestMessage?.firstChild) guestMessage.firstChild.textContent='Pesan Anda';
     document.querySelector('.mobile-menu nav')?.setAttribute('aria-label','Navigasi seluler');
     document.querySelector('.gallery-toolbar .view-options')?.setAttribute('aria-label','Ukuran gambar galeri');
     document.querySelector('.guestbook-form input[name="name"]')?.setAttribute('aria-label','Nama atau nama panggilan');
